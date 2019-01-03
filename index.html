@@ -1,82 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">    
-    <title>canvas</title>    
-    <style>        
-      canvas{            
-        border:1px solid #ccc;
-      }    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="html5、css3、jquery">
+    <meta name="description" content="一个前端工作者的学习笔记">
+    <title>Html5 Canvas 实现图片合成 |</title>
+    <style>
+      .clip {
+          position: absolute;
+          clip: rect(0 0 0 0);
+      }
     </style>
   </head>
   <body>
-    <canvas id="canvas" width="400" height="400"></canvas>
-    <script type="text/javascript">    
-      (function(){        
-        var c = document.getElementById("canvas");
-        var ctx = c.getContext("2d");
-        var ax,ay,r = 30,num=1;//绘制图形的参数        
-        var timeOutEvent = 0;//区分拖拽和点击的参数        
-        //创建图形        
-        function createBlock(a,b,r){            
-          ctx.beginPath();            
-          ctx.fillStyle = "red";            
-          ctx.arc(a,b,r,0,Math.PI*2);            
-          ctx.fill();        
-        }        
-        createBlock(200,200,30);        
-        c.onmousedown = function(ev){            
-          var e = ev||event;            
-          var x = e.clientX;            
-          var y = e.clientY;            
-          timeOutEvent = setTimeout("longPress()",500);            
-          e.preventDefault();            
-          drag(x,y,r);        
-        };        
-        //缩放        
-        c.onmousewheel = function(ev){            
-          var e = ev||event;            
-          num += e.wheelDelta/1200;            
-          r = 30*num;            
-          ctx.clearRect(0,0,c.width,c.height);            
-          if(ax == null || ay == null){                
-            createBlock(200,200,r);            
-          }else{
-            if(r>0){                    
-              createBlock(ax,ay,r);                
-            }            
-          }       
-        };        
-        //拖拽函数        
-        function drag(x,y,r){            
-          // 按下鼠标判断鼠标位置是否在圆上，当画布上有多个路径时，isPointInPath只能判断最后那一个绘制的路径            
-          if(ctx.isPointInPath(x,y)){                
-            //路径正确，鼠标移动事件                
-            c.onmousemove = function(ev){                    
-              var e = ev||event;                    
-              ax = e.clientX;                    
-              ay = e.clientY;                   
-              clearTimeout(timeOutEvent);                    
-              timeOutEvent = 0;                    
-              //鼠标移动每一帧都清楚画布内容，然后重新画圆                    
-              ctx.clearRect(0,0,c.width,c.height);                    
-              createBlock(ax,ay,r);                
-            };                
-            //鼠标移开事件                
-            c.onmouseup = function(){                    
-              c.onmousemove = null;                    
-              c.onmouseup = null;                    
-              clearTimeout(timeOutEvent);                    
-              if(timeOutEvent!=0){                        
-                alert("你这是点击，不是拖拽");                    
-              }                
-            }            
-          }        
-        }        
-        function longPress(){            
-          timeOutEvent = 0;        
-        }    
-      })()
-    </script> 
-  </body>
-</html>
+    <input type="file" id="uploadFile" class="clip" accept="image/*">
+    <label class="ui-button ui-button-primary" for="uploadFile">选择图片</label>
+    <img id="imgCover" src="image/text.png" class="clip">
+    <p id="imgUploadX"></p>
+    <script>
+    var eleUploadFile = document.getElementById('uploadFile');
+    var eleImgCover = document.getElementById('imgCover');
+    var eleImgUploadX = document.getElementById('imgUploadX');
+
+    if (history.pushState) {
+        eleUploadFile.addEventListener('change', function (event) {
+            var reader = new FileReader();
+            var file = event.target.files[0] || event.dataTransfer.files[0];
+            reader.onload = function(e) {
+              var base64 = e.target.result;
+              if (base64.length > 1024 * 50) {
+                  alert('图片尺寸请小于50K');
+                  return;
+              } else {
+                  // 使用canvas合成图片，并base64化
+                  imgTogether(base64, function (url) {
+                      // 尺寸
+                      var size = 180 / (window.devicePixelRatio || 1);
+                      // 预览
+                      eleImgUploadX.innerHTML = '<img src="'+ url +'" width="'+ size +'" height="'+ size +'">';
+                  });
+              }
+            };
+            reader.readAsDataURL(file);
+        });
+        
+        // canvas图片合成
+        var imgTogether = function (url, callback) {
+            var canvas = document.createElement('canvas');
+            var size = 180;
+            canvas.width = size;
+            canvas.height = size;
+
+            var context = canvas.getContext('2d');
+
+            // 这是上传图像
+            var imgUpload = new Image();
+            imgUpload.crossOrigin = 'Anonymous'; //解决跨域
+            imgUpload.onload = function () {
+                // 绘制
+                context.drawImage(imgUpload, 0, 0, size, size, 0,0, size, size);
+                // 再次绘制
+                context.drawImage(eleImgCover, 0, 0, size, size, 0,0, size, size);
+                // 回调
+                callback(canvas.toDataURL('image/png'));
+            };
+            imgUpload.src = url;
+        };
+    } else if (eleImgUploadX) {
+        eleImgUploadX.className = 'remind';
+        eleImgUploadX.innerHTML = '本演示IE10+下才有效果';
+    } 
+</script>
+</body>
+</html> 
