@@ -130,7 +130,7 @@
         <p>温馨提示：长按图片可保存到手机或直接发送给朋友！</p>
     </div>
     <div class="before" style="width:100%;height:100%;text-align: center">
-        <img id="imgbox" src="images/1.png" alt="" style="width:80%;">
+        <img id="imgbox" src="image/image1.jpg" alt="" style="width:80%;">
     </div>
 
     <div class="pic">
@@ -154,7 +154,7 @@
     ]
     function changeImg(id){
         var imgbox = document.getElementById("imgbox");
-        imgbox.src = "images/"+id+".png";//将图片名称设置为比较简单的名称方便与通过id切换
+        imgbox.src = "image/image"+id+".jpg";//将图片名称设置为比较简单的名称方便与通过id切换
         var liList = document.getElementsByTagName("li");
         for(var i = 0; i < liList.length; i++){
             liList[i].className = "";
@@ -175,7 +175,7 @@
             var context = canvas.getContext("2d");
             var imgbox = document.getElementById("imgbox");
             var num = index + 1;
-            var src = "images/"+num+".png";
+            var src = "image/image"+num+".jpg";
             var img = new Image();//创建图片对象，用于在canvas中渲染
             img.src=src;
             var w = 2*clientWidth;
