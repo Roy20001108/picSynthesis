@@ -56,7 +56,7 @@
 
             // 这是上传图像
             var imgUpload = new Image();
-            imgUpload.crossOrigin = 'Anonymous'; //解决跨域
+            // imgUpload.crossOrigin = 'Anonymous'; //解决跨域
             imgUpload.onload = function () {
                 // 绘制
                 context.drawImage(imgUpload, 0, 0, size, size, 0,0, size, size);
