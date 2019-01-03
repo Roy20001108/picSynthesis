@@ -36,7 +36,7 @@
                   // 使用canvas合成图片，并base64化
                   imgTogether(base64, function (url) {
                       // 尺寸
-                      var size = 180 / (window.devicePixelRatio || 1);
+                      var size = 400 / (window.devicePixelRatio || 1);
                       // 预览
                       eleImgUploadX.innerHTML = '<img src="'+ url +'" width="'+ size +'" height="'+ size +'">';
                   });
@@ -48,7 +48,7 @@
         // canvas图片合成
         var imgTogether = function (url, callback) {
             var canvas = document.createElement('canvas');
-            var size = 180;
+            var size = 400;
             canvas.width = size;
             canvas.height = size;
             canvas.layoutwidth = size;
@@ -61,7 +61,7 @@
                 // 绘制
                 context.drawImage(imgUpload, 0, 0, size, size, 0,0, size, size);
                 // 再次绘制
-                context.drawImage(eleImgCover, 0, 0, size, size, 0,0, size, size);
+                context.drawImage(eleImgCover, 0, 0, 100, 100, 0,0, 100, 100);
                 // 回调
                 callback(canvas.toDataURL('image/png'));
             };
