@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>  
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">  
+    <meta http-equiv="pragma" content="no-cache">  
+    <meta http-equiv="Cache-Control" content="no-cache">  
+    <meta http-equiv="Expires" content="0">  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+    <meta name="format-detection" content="telephone=no">  
+    <meta name="apple-mobile-web-app-title" content="">  
+    <script src="js/easeljs.min.js"></script>
+    <title>dragtest</title>
+</head>
+<body>
+    <canvas id="dragCanvas" width="600" height="400" layoutwidth="600"></canvas>
+    <script>
+        var stage=new createjs.Stage("dragCanvas");
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener("tick",stage);
+
+        var image=new createjs.Bitmap("image/image1.jpg");
+        stage.addChild(image);
+
+        var oldX;
+        var oldY;
+        image.addEventListener("touchstart",function(e){
+            oldX= e.touches[0].clientX;
+            oldY= e.touches[0].clientY;
+        });
+        image.addEventListener("touchmove", function (e) {
+            e.target.x+= e.touches[0].clientX-oldX;
+            e.target.y+= e.touches[0].clientY-oldY;
+            oldX= e.touches[0].clienX;
+            oldY= e.touches[0].clientY;
+        });
+    </script>
+</body>
+</html>
