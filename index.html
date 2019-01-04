@@ -26,15 +26,15 @@
 
         var oldX;
         var oldY;
-        image.addEventListener("mousedown",function(e){
-            oldX= e.stageX;
-            oldY= e.stageY;
+        image.addEventListener("touchstart",function(e){
+            oldX= e.touches[0].clientX;
+            oldY= e.touches[0].clientY;
         });
-        image.addEventListener("pressmove", function (e) {
-            e.target.x+= e.stageX-oldX;
-            e.target.y+= e.stageY-oldY;
-            oldX= e.stageX;
-            oldY= e.stageY;
+        image.addEventListener("touchmove", function (e) {
+            e.target.x+= e.touches[0].clientX-oldX;
+            e.target.y+= e.touches[0].clientY-oldY;
+            oldX= e.touches[0].clienX;
+            oldY= e.touches[0].clientY;
         });
     </script>
 </body>
