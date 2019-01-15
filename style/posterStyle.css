@@ -1,0 +1,25 @@
+.content{ 
+  position:absolute; 
+  width:100%; 
+  height:100%; 
+  top:0; 
+  left:0; 
+  overflow:hidden; 
+}
+.templateDiv{
+  height: 72%;
+  background-color: rgba(241, 241, 241);
+  padding: 0 8%;
+  border-bottom: 1px solid rgb(177, 175, 175);
+}
+.selectDiv{
+  height: 13%;
+  border-bottom: 1px solid rgb(177, 175, 175);
+  padding: 2% 5%;
+}
+.selectDiv img{
+  margin: 0 3.3%;
+}
+.tabDiv{
+  height: 6%;
+}
