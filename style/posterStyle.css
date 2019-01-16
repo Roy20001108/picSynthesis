@@ -1,4 +1,8 @@
-.content{ 
+ul,li{
+  padding: 0;
+  margin: 0;
+}
+.content { 
   position:absolute; 
   width:100%; 
   height:100%; 
@@ -6,20 +10,56 @@
   left:0; 
   overflow:hidden; 
 }
-.templateDiv{
-  height: 72%;
+#makePhoster{ 
+  display:block
+}
+#createPhoster{ 
+  display:none
+}
+.templateDiv {
+  height: 79%;
   background-color: rgba(241, 241, 241);
   padding: 0 8%;
   border-bottom: 1px solid rgb(177, 175, 175);
 }
-.selectDiv{
-  height: 13%;
+.selectDiv {
+  height: 15%;
   border-bottom: 1px solid rgb(177, 175, 175);
-  padding: 2% 5%;
+  padding: 0 5%;
 }
-.selectDiv img{
-  margin: 0 3.3%;
+.selectDiv img {
+  margin: 5% 3.3%;
 }
-.tabDiv{
+.tabDiv {
   height: 6%;
+  font-size: 28px;
+  color: rgba(176, 160, 204);
+}
+.tabItem {
+  padding: 0 2%;
+  overflow: hidden;
+}
+.tabItem span {
+  height: 48%;
+  line-height: 48.5%;
+  margin: 0 4%;
+  display: inline-block;
+}
+.button {
+  background-color: rgba(123, 96, 170);
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  height: 100%;
+  width: 25%;
+}
+.selectTab {
+  color: rgba(123, 96, 170);
+  border-bottom: 5px solid rgba(123, 96, 170);
+}
+#con li{
+  display: none;
+}
+#con li.show {
+  display: block;
 }

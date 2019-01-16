@@ -6,25 +6,39 @@
 <meta id="jdouview" name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
 <title>新年海报制作</title>
 <link rel="stylesheet" type="text/css" href="style/posterStyle.css">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
 <body>
 <!-- 第一页 海报制作页 -->
-<div class="content" id="content1">
-   <div class="templateDiv">
-      <img src="image/templateLg1.jpg" height="100%" width="100%"/>
-   </div>
-   <div class="selectDiv">
-    <img src="image/templateMini1.png"/>
-    <img src="image/templateMini2.png"/>
-    <img src="image/templateMini3.png"/>
-    <img src="image/templateMini4.png"/>
-   </div>
-   <div class="tabDiv">
-
-   </div>
+<div class="content" id="makePhoster">
+  <div class="templateDiv">
+    <img src="image/templateLg1.jpg" height="100%" width="100%"/>
+  </div>
+  <div class="selectDiv">
+    <ul id="con">
+      <li class="show">
+        <img src="image/templateMini1.png"/>
+        <img src="image/templateMini2.png"/>
+        <img src="image/templateMini3.png"/>
+        <img src="image/templateMini4.png"/>
+      </li>
+      <li>内容222</li>
+      <li>内容333</li>
+    </ul>
+  </div>
+  <div class="tabDiv">
+    <span class="tabItem" id="tab">
+      <span class="selectTab">选择风格</span>
+      <span>书写祝福</span>
+      <span>选择装饰</span>
+    </span>
+    <button class="button">生成</button>
+  </div>
 </div>
 <!-- 第二页 生成结果页 -->
-<div class="content" id="content2">
+<div class="content" id="createPhoster">
 </div>
+<script src="js/jquery.min.1.7.js"></script>
+<script src="js/posterJs.js"></script>
 </body>
 </html>
