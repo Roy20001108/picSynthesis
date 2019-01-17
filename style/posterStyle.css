@@ -44,6 +44,7 @@ ul,li{
   line-height: 48.5%;
   margin: 0 4%;
   display: inline-block;
+  -webkit-tap-highlight-color: transparent;
 }
 .button {
   background-color: #7B60AA;
