@@ -17,14 +17,14 @@ ul,li{
   display:none
 }
 .templateDiv {
-  height: 79%;
-  background-color: rgba(241, 241, 241);
+  height: 72%;
+  background-color: #F1F1F1;
   padding: 0 8%;
-  border-bottom: 1px solid rgb(177, 175, 175);
+  border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv {
-  height: 15%;
-  border-bottom: 1px solid rgb(177, 175, 175);
+  height: 13%;
+  border-bottom: 1px solid #B1AFAF;
   padding: 0 5%;
 }
 .selectDiv img {
@@ -33,7 +33,7 @@ ul,li{
 .tabDiv {
   height: 6%;
   font-size: 28px;
-  color: rgba(176, 160, 204);
+  color: #B0A0CC;
 }
 .tabItem {
   padding: 0 2%;
@@ -46,7 +46,7 @@ ul,li{
   display: inline-block;
 }
 .button {
-  background-color: rgba(123, 96, 170);
+  background-color: #7B60AA;
   border: none;
   color: #ffffff;
   font-size: 28px;
@@ -54,8 +54,8 @@ ul,li{
   width: 25%;
 }
 .selectTab {
-  color: rgba(123, 96, 170);
-  border-bottom: 5px solid rgba(123, 96, 170);
+  color: #7B60AA;
+  border-bottom: 5px solid #7B60AA;
 }
 #con li{
   display: none;
