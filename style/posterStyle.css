@@ -32,7 +32,8 @@ ul,li{
   padding: 0 5%;
 }
 .selectDiv img {
-  margin: 5% 3.3%;
+  margin: 6% 3.3%;
+  border-bottom: 6px solid transparent;
 }
 .tabDiv {
   height: 8%;
@@ -57,13 +58,35 @@ ul,li{
   height: 100%;
   width: 25%;
 }
+#ImgCon img{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.parentHeight{
+  height: 100%;
+}
 .selectTab {
   color: #7B60AA;
   border-bottom: 5px solid #7B60AA;
 }
-#con li{
+#templateCon li{
   display: none;
 }
-#con li.show {
+.selectImg {
+  border-bottom: 6px solid #7B60AA !important;
+}
+#templateCon li.show {
+  display: block;
+}
+#ImgCon {
+  height: 100%;
+}
+#ImgCon li{
+  display: none;
+  height: 100%;
+  list-style:none;
+}
+#ImgCon li.show {
   display: block;
 }
