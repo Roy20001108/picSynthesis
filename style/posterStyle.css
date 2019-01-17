@@ -17,13 +17,13 @@ ul,li{
   display:none
 }
 .templateDiv {
-  height: 72%;
+  height: 75%;
   background-color: #F1F1F1;
   padding: 0 8%;
   border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv {
-  height: 13%;
+  height: 17%;
   border-bottom: 1px solid #B1AFAF;
   padding: 0 5%;
 }
@@ -31,7 +31,7 @@ ul,li{
   margin: 5% 3.3%;
 }
 .tabDiv {
-  height: 6%;
+  height: 8%;
   font-size: 28px;
   color: #B0A0CC;
 }
