@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="IE=edge,chrome=1">
+<meta id="jdouview" name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
+<title>图片合成demo</title>
+<link rel="stylesheet" type="text/css" href="style/style2.css">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+  <!-- 第一页 上传图片页 -->
+  <div class="content" id="content1">
+    <div class="inner" style="height:575px">
+      <div id="gesture-area" class="wrapper"></div><!--手势区域 gesture-area-->
+        <canvas id="demoCanvas" width="650" height="575" style="width:100%; height:100%"></canvas><!--图片合成区 demoCanvas-->
+        <img src="image/big_box.png" class="upimg" id="upimg">
+        <input type="file" name="photo" id="inputimg" class="button"><!--上传图片到画布按钮 inputimg-->
+      </div>
+    <div class="inner" style="height:20%">
+    <input type="text" id="inputwd" minlength="1" maxlength="6" placeholder="相框昵称，六字以内"><!-- 输入文字 -->
+      <div id="upload" class="button">生成图片</div><!--上传已生成的图片至后台按钮 upload-->
+    </div>
+  </div>
+  <!-- 第二页 生成结果页 -->
+  <div class="content" id="content2">
+    <div class="inner">
+      <div class="imgwrapper"><img id="show" src="" width="100%"></div>
+      <div class="close" id="close"><p>继续生成</p></div>
+    </div>
+  </div>
+  <script src="js/interact.min.js"></script>
+  <script src="js/easeljs.min.js"></script>
+  <script src="js/js2.js"></script>
+</body>
+</html>

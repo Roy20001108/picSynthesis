@@ -11,47 +11,57 @@
 <body>
 <!-- 第一页 海报制作页 -->
 <div class="content" id="makePhoster">
-  <!-- <div style="height:128px;"></div> -->
-  <div class="templateDiv">
-      <ul id="ImgCon">
+    <div class="templateDiv">
+        <div id="gesture-area"></div>
+        <canvas id="posterCanvas" width="673" height="1020" style="width:100%; height:100%"></canvas>
+        <img src="image/big_box.png" class="upimg" id="upimg">
+        <input type="file" name="photo" id="inputimg" class="upButton">
+      <!-- <ul id="ImgCon">
         <li class="show parentHeight">
-          <img src="image/templateLg1.jpg"/>
+          <img src="image/templateLg_1.png" class="bgImg"/>
+          <div id="gesture-area" class="wrapper"></div>
+          <canvas id="posterCanvas" width="650" height="957" style="width:100%; height:100%"></canvas>
+          <img src="image/big_box.png" class="upimg" id="upimg">
+          <input type="file" name="photo" id="inputimg" class="upButton">
         </li>
         <li >
-          <img src="image/templateLg2.jpg"/>
+          <img src="image/templateLg_2.png"/>
         </li>
         <li>
-          <img src="image/templateLg3.jpg"/>
+          <img src="image/templateLg_3.png"/>
         </li>
         <li>
-          <img src="image/templateLg4.jpg"/>
+          <img src="image/templateLg_4.png"/>
         </li>
-  </div>
-  <div class="selectDiv">
-    <ul id="templateCon">
-      <li class="show">
-        <img class="selectImg" src="image/templateMini1.png"/>
-        <img src="image/templateMini2.png"/>
-        <img src="image/templateMini3.png"/>
-        <img src="image/templateMini4.png"/>
-      </li>
-      <li>内容222</li>
-      <li>内容333</li>
-    </ul>
-  </div>
-  <div class="tabDiv">
-    <span class="tabItem" id="operaTab">
-      <span class="selectTab">选择风格</span>
-      <span>书写祝福</span>
-      <span>选择装饰</span>
-    </span>
-    <button class="button">生成</button>
-  </div>
+      </ul> -->
+    </div>
+    <div class="selectDiv">
+      <ul id="templateCon">
+        <li class="show">
+          <img class="selectImg" src="image/templateMini_1.png"/>
+          <img src="image/templateMini_2.png"/>
+          <img src="image/templateMini_3.png"/>
+          <img src="image/templateMini_4.png"/>
+        </li>
+        <li>书写祝福</li>
+        <li>选择装饰</li>
+      </ul>
+    </div>
+    <div class="tabDiv">
+      <span class="tabItem" id="operaTab">
+        <span class="selectTab">选择风格</span>
+        <span>书写祝福</span>
+        <span>选择装饰</span>
+      </span>
+      <button class="button">生成</button>
+    </div>
 </div>
 <!-- 第二页 生成结果页 -->
 <div class="content" id="createPhoster">
 </div>
 <script src="js/jquery.min.1.7.js"></script>
+<script src="js/interact.min.js"></script>
+<script src="js/easeljs.min.js"></script>
 <script src="js/posterJs.js"></script>
 </body>
 </html>

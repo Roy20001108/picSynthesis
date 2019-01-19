@@ -14,6 +14,13 @@ ul,li{
   left:0; 
   overflow:hidden; 
 }
+/* .inner{
+  position:absolute; 
+  width:100%; 
+  height:100%; 
+  top:0; 
+  left:0;
+} */
 #makePhoster{ 
   display:block
 }
@@ -21,8 +28,9 @@ ul,li{
   display:none
 }
 .templateDiv {
+  position: relative;
   height: 75%;
-  background-color: #F1F1F1;
+  /* background-color: #F1F1F1; */
   padding: 0 8%;
   border-bottom: 1px solid #B1AFAF;
 }
@@ -58,10 +66,11 @@ ul,li{
   height: 100%;
   width: 25%;
 }
-#ImgCon img{
+.bgImg{
   display: inline-block;
   height: 100%;
   width: 100%;
+  z-index: 3;
 }
 .parentHeight{
   height: 100%;
@@ -81,6 +90,11 @@ ul,li{
 }
 #ImgCon {
   height: 100%;
+  position: relative;
+  /* width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; */
 }
 #ImgCon li{
   display: none;
@@ -89,4 +103,40 @@ ul,li{
 }
 #ImgCon li.show {
   display: block;
+  position: relative;
+}
+#gesture-area {
+  position:absolute; 
+  width:100%; 
+  height:100%; 
+  top:0; 
+  left:0; 
+  overflow:hidden; 
+  z-index:99; 
+}
+.upimg { 
+  position:absolute; 
+  top:28%; 
+  left:58%; 
+  margin: 0;
+  z-index: -1;
+}
+#inputimg {
+  position: absolute; 
+  top:28%; 
+  left:58%; 
+  margin: 0; 
+  z-index:100; 
+  opacity:0;
+}
+.upButton{ 
+  width:180px; 
+  height:180px; 
+  border:1px solid #333; 
+  border-radius:10px; 
+  line-height:180px; 
+  font-family:'微软雅黑'; 
+  font-size:30px; 
+  text-align:center; 
+  color:#333;
 }
