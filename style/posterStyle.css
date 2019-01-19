@@ -140,3 +140,8 @@ ul,li{
   text-align:center; 
   color:#333;
 }
+.imgwrapper{ 
+  width:100%; 
+  height:100%; 
+  margin:auto;
+}

@@ -160,39 +160,38 @@
       console.log('*************'+elePos.y)
       stage.update();
     }
-    return;
     // 生成图片
     document.getElementById('upload').onclick = function() {
-      var getCanvas = document.getElementById('demoCanvas');	
+      var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
-      var inputwd = document.getElementById('inputwd').value;
+      // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
-      if(inputwd != '' && inputimg!=''){
-        context.font='24px 微软雅黑';
-        context.textAlign='center';
-        context.textBaseline='middle';
-        context.fillStyle='#333';
-        context.fillText('我爱',158,18);
-        context.fillText(inputwd,458,18);
+      if(inputimg!=''){
+        // context.font='24px 微软雅黑';
+        // context.textAlign='center';
+        // context.textBaseline='middle';
+        // context.fillStyle='#333';
+        // context.fillText('我爱',158,18);
+        // context.fillText(inputwd,458,18);
   
-        document.getElementById('content1').style.display='none';
-        document.getElementById('content2').style.display='block';
+        document.getElementById('makePhoster').style.display='none';
+        document.getElementById('createPhoster').style.display='block';
   
          var imgDatadahe = getCanvas.toDataURL().replace("image/png", "image/octet-stream");
            document.getElementById('show').src=imgDatadahe;
            console.log('imgDatadahe：'+imgDatadahe);
       }else{
-        alert('请上传图片，为相框起个昵称，例如：童话相框~~~');
+        alert('请上传图片');
       }
       
     }
   
-    document.getElementById('close').onclick=function(){
-       setTimeout(function(){
-          document.getElementById('content1').style.display='block';
-          document.getElementById('content2').style.display='none';        
-       },300);
-    };
+    // document.getElementById('close').onclick=function(){
+    //    setTimeout(function(){
+    //       document.getElementById('content1').style.display='block';
+    //       document.getElementById('content2').style.display='none';        
+    //    },300);
+    // };
   
     function isAndroid(){
       var u = navigator.userAgent;
