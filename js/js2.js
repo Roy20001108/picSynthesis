@@ -78,7 +78,6 @@
   
   
     function dragMoveListener(event) {
-      alert(22222);
       if (typeof imgthis == 'undefined') {
         return
       }
@@ -109,7 +108,7 @@
   
       var imgFaceWidth=imgWidth*elePos.w/100;
       var imgFaceHeight=imgHeight*elePos.h/100;
-      var sizescale=448/imgFaceWidth/2;
+      var sizescale=600/imgFaceWidth/2;
       scale=sizescale;
       console.log('imgWidth:'+imgWidth+';elePos.w:'+elePos.w+';scale:'+sizescale);
   
