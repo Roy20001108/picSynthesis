@@ -21,13 +21,18 @@
     $(this).addClass('selectImg').siblings().removeClass('selectImg');
     // $('#ImgCon li').eq(i).show().siblings().hide();
     if (i == 0) {
+      document.getElementById('inputimg').style.zIndex = 100;
+      document.getElementById('upimg').style.visibility="visible";
       bgdata = bgdata1;
     } else if (i == 1) {
-      bgdata = bgdata2;
-    } else if (i == 2) {
-      bgdata = bgdata3;
-    } else {
+      document.getElementById('upimg').style.visibility="hidden";
       bgdata = bgdata4;
+    } else if (i == 2) {
+      document.getElementById('upimg').style.visibility="hidden";
+      bgdata = bgdata2;
+    } else {
+      document.getElementById('upimg').style.visibility="hidden";
+      bgdata = bgdata3;
     }
     creatCanvas(bgdata);
   });
@@ -66,7 +71,7 @@
     
         var imgFaceWidth=imgWidth*elePos.w/100;
         var imgFaceHeight=imgHeight*elePos.h/100;
-        var sizescale=600/imgFaceWidth/2;
+        var sizescale=800/imgFaceWidth/2;
         scale=sizescale;
         console.log('imgWidth:'+imgWidth+';elePos.w:'+elePos.w+';scale:'+sizescale);
     
