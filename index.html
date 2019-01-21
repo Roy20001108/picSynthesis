@@ -37,13 +37,33 @@
     </div>
     <div class="selectDiv">
       <ul id="templateCon">
-        <li class="show">
+        <li class="show" style="padding: 0 5%;">
           <img class="selectImg" src="image/templateMini_1.png"/>
           <img src="image/templateMini_2.png"/>
           <img src="image/templateMini_3.png"/>
           <img src="image/templateMini_4.png"/>
         </li>
-        <li>书写祝福</li>
+        <li>
+          <button class="blessBtn">添加文字</button>
+          <!-- <div style="overflow:hidden;"> -->
+            <div class="scrollDiv">
+              <div class="blessFont">
+                <span>新的一年，扬帆启航，不忘初心，为爱坚守。</span>
+                <span>昨天挺好，今天很好，明天会更好！</span>
+                <span>雀悦新春，祝福来</span>
+                <span>欢呼“雀”跃 一路“巢”前</span>
+                <span>多喜乐，长安宁，岁无忧，皆如愿</span>
+              </div>
+              <div class="blessFont">
+                <span>“雀”上枝头春意闹 紫燕衔泥筑家“巢”</span>
+                <span>燕衔喜信春光好，猪拱财门幸福长</span>
+                <span>猪年笑欢颜，新年福满多</span>
+                <span>你是健康的，我是快乐的</span>
+                <span>我可爱的宝宝们，你若安好，我便晴天</span>
+              </div>
+            </div>
+          <!-- </div> -->
+        </li>
         <!-- <li>选择装饰</li> -->
       </ul>
     </div>
@@ -59,9 +79,8 @@
 <!-- 第二页 生成结果页 -->
 <div class="content" id="createPhoster">
   <div class="imgwrapper">
-    <img id="show" src="" width="100%" height="80%">
-    <button style="width:100%;height:50px;background-color: aqua;margin-top:-50px;">长按保存到相册2</button>
-  </div>
+    <img id="show" src="" width="100%">
+</div>
 </div>
 <script src="js/jquery.min.1.7.js"></script>
 <script src="js/interact.min.js"></script>
