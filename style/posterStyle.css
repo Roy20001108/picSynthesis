@@ -23,7 +23,7 @@ ul,li{
   left:0;
 } */
 #makePhoster{ 
-  display:block
+  display:none
 }
 #createPhoster{ 
   display:none
@@ -264,4 +264,56 @@ ul,li{
   min-width: 170px;
   float: right;
   margin-right: 15px;
+}
+
+.loading{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.loading img{
+  display: block;
+}
+#progressbar{
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left:-90px;
+  margin-top:-10px;
+  width:280px;
+  height:20px;
+  background-color: darkgray;
+  border-radius: 5px;
+}
+/*在进度条元素上调用动画*/
+#fill{
+  /* width:50%; */
+  height:20px;
+  animation: move 800ms infinite linear;
+  text-align: center;
+  background-color: #7B60AA;
+}
+/*实现元素宽度的过渡动画效果*/
+@keyframes move {
+  0%{
+      width:0;
+
+  }
+  100%{
+      width:100%;
+  }
+}
+@-webkit-keyframes move {
+  0%{
+      width:0;
+
+  }
+  100%{
+      width:100%;
+  }
 }
