@@ -120,6 +120,28 @@
     }
     upLoadImg(stage,bg);
   }
+  var maindiv=document.getElementById("moveBtn");
+    var textArea=document.getElementById("textArea");
+    var startX, startY;
+    maindiv.addEventListener("touchstart", touchStart, false);
+    function touchStart(event) {
+      var touch = event.touches[0];
+         startX = touch.pageX;
+         startY = touch.pageY;
+    }
+    maindiv.addEventListener("touchmove", touchMove, false);
+    function touchMove(event) {
+         event.preventDefault();
+         var touch = event.touches[0],
+              x = touch.pageX - startX,
+              y = touch.pageY - startY;
+              // maindiv.style.webkitTransform = 'translate(' + x + 'px, ' + y + 'px)'; 
+              // alert(textArea.style. width);
+              // alert(x);
+              // alert(parseFloat(textArea.style. width) + x);
+              textArea.style. width =  parseFloat(textArea.style. width) + x + 'px';  
+              textArea.style. height =  parseFloat(textArea.style. height) + y + 'px';
+        }
   var imgthis;
     // 上传图片
     function upLoadImg (stage,bg) {
