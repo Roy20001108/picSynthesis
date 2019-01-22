@@ -23,7 +23,7 @@ ul,li{
   left:0;
 } */
 #makePhoster{ 
-  display:none
+  display:block
 }
 #createPhoster{ 
   display:none
@@ -279,7 +279,7 @@ ul,li{
 .loading img{
   display: block;
 }
-#progressbar{
+/* #progressbar{
   position: absolute;
   top:50%;
   left:50%;
@@ -289,17 +289,16 @@ ul,li{
   height:20px;
   background-color: darkgray;
   border-radius: 5px;
-}
+} */
 /*在进度条元素上调用动画*/
-#fill{
-  /* width:50%; */
+/* #fill{
   height:20px;
   animation: move 800ms infinite linear;
   text-align: center;
   background-color: #7B60AA;
-}
+} */
 /*实现元素宽度的过渡动画效果*/
-@keyframes move {
+/* @keyframes move {
   0%{
       width:0;
 
@@ -316,4 +315,4 @@ ul,li{
   100%{
       width:100%;
   }
-}
+} */
