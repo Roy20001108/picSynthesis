@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="keywords" content="html5、css3、jquery">
+  <meta name="description" content="">
+  <title>canvas</title>
+  <style>
+  </style>
+  <script src="js/jquery.min.1.7.js"></script>
+</head>
+
+<body>
+  <img src="image/small_box.jpg" id="moveBtn" />
+  <script type="text/javascript">   
+    var maindiv = document.getElementById("moveBtn");
+    var endpst = {}, //结束位置                
+    elepst= {},                 
+    start={}; //初始位置             
+    maindiv.addEventListener('touchstart', function(event) {                
+      // if(event.targetTouches.length > 1) 
+      // return; 
+      alert(11111);             
+      var offset, touch = event.targetTouches[0],                    
+      style = window.getComputedStyle(this, null);// 当前元素的css 样式                     
+      start = {x: touch.clientX, y: touch.clientY};                    
+      elepst = {                        
+        x: parseFloat(style.getPropertyValue('left')),                         
+        y: parseFloat(style.getPropertyValue('top')),                    
+        };            
+    }, false);             
+    maindiv.addEventListener('touchmove', function(event) {
+      // alert(3333);            
+      // if(event.targetTouches.length > 1) return;   
+      alert(22222);                           
+      var touch = event.targetTouches[0],                    
+      offset = { x : touch.clientX - start.x, y : touch.clientY - start.y }; //手移动的 偏移位置                 
+      endpst['left'] = elepst.x + offset.x;                
+      endpst['top'] = elepst.y + offset.y;                 
+      this.style.left = endpst.left+ 'px';                
+      this.style.top = endpst.top + 'px';            
+    }, false);            //移动结束            
+    maindiv.addEventListener('touchend', function(e) {                
+      if(e.targetTouches.length > 1) return;             
+    }, false);
+  </script>
+</body>
+
+</html>

@@ -122,26 +122,23 @@
   }
   var maindiv=document.getElementById("moveBtn");
     var textArea=document.getElementById("textArea");
-    var startX, startY;
-    maindiv.addEventListener("touchstart", touchStart, false);
-    function touchStart(event) {
-      var touch = event.touches[0];
-         startX = touch.pageX;
-         startY = touch.pageY;
-    }
-    maindiv.addEventListener("touchmove", touchMove, false);
-    function touchMove(event) {
-         event.preventDefault();
-         var touch = event.touches[0],
-              x = touch.pageX - startX,
-              y = touch.pageY - startY;
-              // maindiv.style.webkitTransform = 'translate(' + x + 'px, ' + y + 'px)'; 
-              // alert(textArea.style. width);
-              // alert(x);
-              // alert(parseFloat(textArea.style. width) + x);
-              textArea.style. width =  parseFloat(textArea.style. width) + x + 'px';  
-              textArea.style. height =  parseFloat(textArea.style. height) + y + 'px';
-        }
+    var startX, startY, moveEndX, moveEndY , x, y;
+    maindiv.addEventListener('touchstart',function(event){
+      //  event.preventDefault();
+      var touch = event.targetTouches[0];
+         startX = touch.pageX - maindiv.offsetLeft;
+         startY = touch.pageY - maindiv.offsetTop;
+      });
+      maindiv.addEventListener('touchmove',function(event){
+        event.preventDefault();
+        var touch = event.targetTouches[0];
+        moveEndX = touch.pageX,
+        moveEndY = touch.pageY,
+        x = moveEndX - startX - maindiv.offsetLeft,
+        y = moveEndY - startY - maindiv.offsetTop;
+        textArea.style.width =  parseFloat(textArea.style.width) + x + 'px';  
+        textArea.style.height =  parseFloat(textArea.style.height) + y + 'px';
+    });
   var imgthis;
     // 上传图片
     function upLoadImg (stage,bg) {
@@ -258,14 +255,20 @@
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
+      var toNameVal = $("input[name='toName']").val();
+      var fromNameVal = $("input[name='fromName']").val();
+      var blessVal = $(".blessTemplate").html();
+      // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
-        // context.font='24px 微软雅黑';
+        context.font='15px KaiTi';
         // context.textAlign='center';
         // context.textBaseline='middle';
-        // context.fillStyle='#333';
-        // context.fillText('我爱',158,18);
+        context.fillStyle='#333';
+        context.fillText(toNameVal,158,300);
+        context.fillText(blessVal,158,400);
+        context.fillText(blessVal,158,500);
         // context.fillText(inputwd,458,18);
   
         document.getElementById('makePhoster').style.display='none';
