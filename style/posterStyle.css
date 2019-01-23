@@ -119,8 +119,8 @@ ul,li{
 }
 .upimg { 
   position:absolute; 
-  top:28%; 
-  left:58%; 
+  top:30%; 
+  left:59%; 
   margin: 0;
   z-index: -1;
 }
@@ -184,26 +184,29 @@ ul,li{
   color: #ffffff !important;
 }
 #blessOneDiv {
-  font-size: 28px;
+  font-family: "STKaiti";
+  font-size: 30px;
   position: absolute;
-  top: 38%;
-  left: 11%;
-  width: 45%;
-  color: #7B60AA;
+  top: 500px;
+  left: 100px;
+  width: 328px;
+  color: #724079;
   font-weight: bold;
   visibility: hidden;
 }
 #blessTwoDiv {
+  font-family: "STKaiti";
   font-size: 28px;
   position: absolute;
-  top: 15%;
-  left: 20%;
-  width: 60%;
+  top: 500px;
+  left: 100px;
+  width: 216px;
   color: #ffcc66;
   font-weight: bold;
   visibility: hidden;
 }
 #blessThreeDiv{
+  font-family: "STKaiti";
   font-size: 28px;
   position: absolute;
   top: 30%;
@@ -214,6 +217,7 @@ ul,li{
   visibility: hidden;
 }
 #blessFourDiv{
+  font-family: "STKaiti";
   font-size: 28px;
   position: absolute;
   top: 50%;
@@ -223,45 +227,80 @@ ul,li{
   font-weight: bold;
   visibility: hidden;
 }
+.blessTemplate {
+  display:none;
+}
 .inputStyle {
   background-color: transparent;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   padding: 5px;
   outline: none;
+  font-family: "STKaiti";
+  border: 1px solid #bfbfbf;
 }
 .inputOneStyle {
-  color: #7B60AA;
-  border: 3px solid #7B60AA;
+  color: #724079;
 }
 .inputTwoStyle {
-  color: #ffcc66;
-  border: 3px solid #ffcc66;
+  color: #f4d776;
 }
 .inputThreeStyle {
   color: #ffffff;
-  border: 3px solid #ffffff;
 }
 .inputFourStyle {
-  color: #660066;
-  border: 3px solid #660066;
+  color: #521f3b;
 }
 .inputStyle::-webkit-input-placeholder{
-  color: #B0A0CC;
+  font-weight: 100;
 }
 .inputStyle::-moz-placeholder{
-  color: #B0A0CC;        
+  font-weight: 100;
 }
 .inputStyle:-ms-input-placeholder{
-  color: #B0A0CC;        
+  font-weight: 100;
+}
+.inputOneStyle::-webkit-input-placeholder{
+  color: rgba(93,40,103,0.73);
+}
+.inputOneStyle::-moz-placeholder{
+  color: rgba(93,40,103,0.73);    
+}
+.inputOneStyle:-ms-input-placeholder{
+  color: rgba(93,40,103,0.73);      
+}
+.inputTwoStyle::-webkit-input-placeholder{
+  color: rgba(243,213,117,0.53);
+}
+.inputTwoStyle::-moz-placeholder{
+  color: rgba(243,213,117,0.53);
+}
+.inputTwoStyle:-ms-input-placeholder{
+  color: rgba(243,213,117,0.53);
+}
+.inputThreeStyle::-webkit-input-placeholder{
+  color: rgba(255,255,255,0.64);
+}
+.inputThreeStyle::-moz-placeholder{
+  color: rgba(255,255,255,0.64);
+}
+.inputThreeStyle:-ms-input-placeholder{
+  color: rgba(255,255,255,0.64);   
+}
+.inputFourStyle::-webkit-input-placeholder{
+  color: rgba(82,31,59,0.87);
+}
+.inputFourStyle::-moz-placeholder{
+  color: rgba(82,31,59,0.87);
+}
+.inputFourStyle:-ms-input-placeholder{
+  color: rgba(82,31,59,0.87);
 }
 .toNameStyle {
-  width: 220px;
-  min-width: 220px;
+  width: 216px;
 }
 .fromNameStyle {
-  width: 220px;
-  min-width: 170px;
+  width: 190px;
   float: right;
   margin-right: 15px;
 }

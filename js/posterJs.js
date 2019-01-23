@@ -37,6 +37,7 @@
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectTab').siblings().removeClass('selectTab');
     $('#templateCon li').eq(i).show().siblings().hide();
+    $('.scrollDiv span').removeClass('selectFont');
     document.getElementById("blessOneDiv").style.visibility="hidden";
     document.getElementById("blessTwoDiv").style.visibility="hidden";
     document.getElementById("blessThreeDiv").style.visibility="hidden";
@@ -50,18 +51,25 @@
     // $('#ImgCon li').eq(i).show().siblings().hide();
     if (i == 0) {
       document.getElementById('inputimg').style.zIndex = 100;
+      document.getElementById('gesture-area').style.zIndex = 99;
       document.getElementById('upimg').style.visibility="visible";
       selectImgFlag = 0;
       bgdata = bgdata1;
     } else if (i == 1) {
+      document.getElementById('inputimg').style.zIndex = -1;
+      document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
       selectImgFlag = 1;
       bgdata = bgdata2;
     } else if (i == 2) {
+      document.getElementById('inputimg').style.zIndex = -1;
+      document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
       selectImgFlag = 2;
       bgdata = bgdata3;
     } else {
+      document.getElementById('inputimg').style.zIndex = -1;
+      document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
       selectImgFlag = 3;
       bgdata = bgdata4;
@@ -71,7 +79,20 @@
   $('.scrollDiv span').click(function() {
     $('.scrollDiv span').removeClass('selectFont');
     $(this).addClass('selectFont');
-    $(".blessTemplate").html($(this).html())
+    $(".blessTemplate").html('<span style="padding-left: 2em;"></span>' + $(this).html())
+    controlHide();
+    $(".blessTemplate").show();
+    $(".textArea").hide();
+  });
+  // 添加文字
+  $(".blessBtn").click(function() {
+    $('.scrollDiv span').removeClass('selectFont');
+    controlHide();
+    $(".blessTemplate").hide();
+    $(".textArea").show();
+    areaMove();
+  });
+  function controlHide () {
     if (selectImgFlag == 0) {
       // alert($("#blessOneDiv").html());
       document.getElementById("blessOneDiv").style.visibility="visible";
@@ -94,11 +115,7 @@
       document.getElementById("blessThreeDiv").style.visibility="hidden";
       document.getElementById("blessFourDiv").style.visibility="visible";
     }
-  });
-  // 添加文字
-  $(".blessBtn").click(function() {
-    document.getElementById("blessOneDiv").style.visibility="visible";
-  });
+  }
   var stage;
   function creatCanvas(bgdata) {
     var isNotupload=true;
@@ -120,8 +137,9 @@
     }
     upLoadImg(stage,bg);
   }
-  var maindiv=document.getElementById("moveBtn");
-    var textArea=document.getElementById("textArea");
+  function areaMove () {
+    var maindiv=document.getElementsByClassName("moveBtn")[selectImgFlag];
+    var textArea=document.getElementsByClassName("textArea")[selectImgFlag];
     var startX, startY, moveEndX, moveEndY , x, y;
     maindiv.addEventListener('touchstart',function(event){
       //  event.preventDefault();
@@ -139,6 +157,8 @@
         textArea.style.width =  parseFloat(textArea.style.width) + x + 'px';  
         textArea.style.height =  parseFloat(textArea.style.height) + y + 'px';
     });
+  }
+  
   var imgthis;
     // 上传图片
     function upLoadImg (stage,bg) {
@@ -262,13 +282,13 @@
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
-        context.font='15px KaiTi';
+        context.font='15px STKaiti';
         // context.textAlign='center';
         // context.textBaseline='middle';
-        context.fillStyle='#333';
+        context.fillStyle='#7B60AA';
         context.fillText(toNameVal,158,300);
-        context.fillText(blessVal,158,400);
-        context.fillText(blessVal,158,500);
+        context.fillText(blessVal,158,400,'50px');
+        context.fillText(fromNameVal,158,500);
         // context.fillText(inputwd,458,18);
   
         document.getElementById('makePhoster').style.display='none';
