@@ -2,7 +2,7 @@
   font-family:'KaitiMobile';
   /* url("../font/simkai.svg#KaitiMobile") format('svg'), */
   /* src: url('../font/simkai.woff') format('woff'),  */
-    src: url("../font/simkai.ttf") format('truetype');
+  src: url("../font/GBKaiTi.ttf") format('truetype');
 }
 html,body{
   -webkit-text-size-adjust: 100%;
