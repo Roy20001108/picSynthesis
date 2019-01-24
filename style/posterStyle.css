@@ -324,7 +324,7 @@ ul,li{
 }
 @font-face {
   font-family:'STKaiti';
-  src: url(font/STKaiti.ttf);
+  src: url(font/STKaiti.ttf) format(‘truetype’);
 }
 
 /* #progressbar{
