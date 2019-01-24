@@ -1,5 +1,6 @@
 (function(global){
   var bgdata;
+  var orient;
   var bgdata1 = "image/templateLg_1.png";
   var bgdata2 = "image/templateLg_2.png";
   var bgdata3 = "image/templateLg_3.png";
@@ -229,8 +230,10 @@
       }
       
       oFReader.readAsDataURL(oFile);
-      var orient =  getPhotoOrientation(oFile);
-      // alert(orient);
+      EXIF.getData(oFile, function () {
+        orient = EXIF.getTag(this, 'Orientation');
+      });
+      alert(orient);
       if (orient == 6) {
         a = 90 * Math.PI / 180;
       }
@@ -357,15 +360,11 @@
     //       document.getElementById('content2').style.display='none';        
     //    },300);
     // };
-    function getPhotoOrientation(img){
-      alert(11111);
-      var orient;
-      EXIF.getData(img, function () {
-          orient = EXIF.getTag(this, 'Orientation');
-          alert(orient);
-      });
-      return orient;
-    }
+    // function getPhotoOrientation(img){
+    //  EXIF.getData(img, function () {
+    //       orient = EXIF.getTag(this, 'Orientation');
+    //   });
+    // }
     function isAndroid(){
       var u = navigator.userAgent;
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
