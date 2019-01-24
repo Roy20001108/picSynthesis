@@ -358,10 +358,10 @@
     //    },300);
     // };
     function getPhotoOrientation(img){
-      alert(111111)
       var orient;
       EXIF.getData(img, function () {
           orient = EXIF.getTag(this, 'Orientation');
+          alert(orient);
       });
       return orient;
     }
