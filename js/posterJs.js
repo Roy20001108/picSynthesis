@@ -228,15 +228,16 @@
         alert("You must select a valid image file!");
         return;
       }
-      
+      alert(1111);
       oFReader.readAsDataURL(oFile);
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
+        alert(orient);
+        if (orient == 6) {
+          a = 90 * Math.PI / 180;
+        }
       });
-      alert(orient);
-      if (orient == 6) {
-        a = 90 * Math.PI / 180;
-      }
+      
     };
      /*上传图片的初始位置 放大倍数及旋转角度*/
     
