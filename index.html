@@ -27,7 +27,7 @@
         <div id="gesture-area"></div>
         <canvas id="posterCanvas" width="670" height="1018" style="width:100%; height:100%"></canvas>
         <img src="image/addImg.png" class="upimg" id="upimg"/>
-        <input type="file" name="photo" id="inputimg" class="upButton"/>
+        <input type="file" accept="image/*" capture="camera" name="photo" id="inputimg" class="upButton"/>
         <div id="blessOneDiv">
           <input type="text" name="toName" class="toNameStyle inputStyle inputOneStyle" placeholder="添加祝福专属人：" maxlength="7"/>
           <p class="blessTemplate"></p>
@@ -136,6 +136,7 @@
 
 <script src="js/interact.min.js"></script>
 <script src="js/easeljs.min.js"></script>
+<script src="js/exif.js"></script>
 <script src="js/posterJs.js"></script>
 </body>
 </html>

@@ -199,6 +199,18 @@
         },200)
       };
     }
+    var elePos = {
+      x: 80,
+      y: 500,
+      s: 1,
+      a: 0,
+      w:100,
+      h:100
+    }
+    var scale = 1,
+      angle = 0,
+      gestureArea = document.getElementById('gesture-area'); //手势区域
+    var stageplay=1;
         /*上传图片*/
     document.getElementById('inputimg').onchange = function() {
       document.getElementById('inputimg').style.zIndex = 1;
@@ -216,21 +228,14 @@
         return;
       }
       
-      oFReader.readAsDataURL(oFile);		
+      oFReader.readAsDataURL(oFile);
+      var orient =  getPhotoOrientation(oFile);
+      if (orient == 6) {
+        a = 90 * Math.PI / 180;
+      }
     };
-    /*上传图片的初始位置 放大倍数及旋转角度*/
-    var elePos = {
-      x: 80,
-      y: 500,
-      s: 1,
-      a: 0,
-      w:100,
-      h:100
-    }
-    var scale = 1,
-      angle = 0,
-      gestureArea = document.getElementById('gesture-area'); //手势区域
-    var stageplay=1;
+     /*上传图片的初始位置 放大倍数及旋转角度*/
+    
   
     /*调整图片位置*/
     interact(gestureArea).gesturable({
@@ -351,7 +356,13 @@
     //       document.getElementById('content2').style.display='none';        
     //    },300);
     // };
-  
+    function getPhotoOrientation(img){
+      var orient;
+      EXIF.getData(img, function () {
+          orient = EXIF.getTag(this, 'Orientation');
+      });
+      return orient;
+    }
     function isAndroid(){
       var u = navigator.userAgent;
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
