@@ -278,7 +278,7 @@
       var toNameVal = $("input[name='toName']").val();
       var fromNameVal = $("input[name='fromName']").val();
       var blessVal = $(".blessTemplate").html();
-      var blessValStr = "  " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
+      var blessValStr = "&nbsp&nbsp&nbsp&nbsp" + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       // alert(blessValStr);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
