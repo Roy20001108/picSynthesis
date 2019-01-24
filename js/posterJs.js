@@ -230,6 +230,7 @@
       
       oFReader.readAsDataURL(oFile);
       var orient =  getPhotoOrientation(oFile);
+      alert(orient);
       if (orient == 6) {
         a = 90 * Math.PI / 180;
       }
