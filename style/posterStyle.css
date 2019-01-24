@@ -322,6 +322,10 @@ ul,li{
 .loading img{
   display: block;
 }
+@font-face {
+  font-family:'STKaiti';
+  src: url(font/STKaiti.ttf);
+}
 
 /* #progressbar{
   position: absolute;
