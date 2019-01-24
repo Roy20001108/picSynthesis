@@ -282,13 +282,14 @@
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
-        context.font='15px STKaiti';
-        // context.textAlign='center';
-        // context.textBaseline='middle';
+        context.font='30px STKaiti';
+        context.textAlign='center';
+        context.textBaseline='middle';
         context.fillStyle='#7B60AA';
         context.fillText(toNameVal,158,300);
-        context.fillText(blessVal,158,400,'50px');
-        context.fillText(fromNameVal,158,500);
+        drawText(context,blessVal,158,400,328)
+        // context.fillText(blessVal,158,400,'50px');
+        context.fillText(fromNameVal,158,700);
         // context.fillText(inputwd,458,18);
   
         document.getElementById('makePhoster').style.display='none';
@@ -302,6 +303,41 @@
       }
       
     }
+    function drawText(context,t,x,y,w){
+
+      var chr = t.split("");
+      var temp = "";              
+      var row = [];
+  
+      // context.font = "20px Arial";
+      // context.fillStyle = "black";
+      // context.textBaseline = "middle";
+  
+      for(var a = 0; a < chr.length; a++){
+  
+          if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
+              temp += chr[a];
+          }//context.measureText(text).width  测量文本text的宽度
+          else{
+              row.push(temp);
+              temp = chr[a];
+          }
+      }
+      row.push(temp);
+  
+      for(var b = 0; b < row.length; b++){
+          context.fillText(row[b],x,y+(b+1)*24);//字体20，间隔24。类似行高
+      }
+  
+      // 只显示2行，加...
+      /*for(var b = 0; b < 2; b++){
+          var str = row[b];
+          if(b == 1){
+              str = str.substring(0,str.length-1) + '...';
+          }
+          context.fillText(str,x,y+(b+1)*24);
+      }*/
+  }
   
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){

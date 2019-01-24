@@ -300,10 +300,12 @@ ul,li{
 }
 .toNameStyle {
   width: 216px;
+  text-align: left;
 }
 .fromNameStyle {
   width: 190px;
   float: right;
+  text-align: right;
   margin-right: 15px;
 }
 
