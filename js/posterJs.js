@@ -283,12 +283,13 @@
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
         context.font='30px STKaiti';
-        context.textAlign='center';
+        context.textAlign='left';
         context.textBaseline='middle';
         context.fillStyle='#7B60AA';
         context.fillText(toNameVal,158,300);
-        drawText(context,blessVal,158,400,328)
+        drawText(context,blessVal,158,400,328);
         // context.fillText(blessVal,158,400,'50px');
+        context.textAlign='right';
         context.fillText(fromNameVal,158,700);
         // context.fillText(inputwd,458,18);
   
