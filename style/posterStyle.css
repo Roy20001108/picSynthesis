@@ -1,19 +1,9 @@
 @font-face {
   font-family:'KaitiMobile';
-  src: url("../font/simkai.eot");
-  src: url('../font/simkai.eot?#iefix') format('eot'),
   /* url("../font/simkai.svg#KaitiMobile") format('svg'), */
-  url('../font/simkai.woff') format('woff'), 
-  url("../font/simkai.ttf") format('truetype');
+  /* src: url('../font/simkai.woff') format('woff'),  */
+    src: url("../font/simkai.ttf") format('truetype');
 }
-@font-face {
-  font-family: 'hooray'; /*给自定义字体命名*/
-  src: url('hooray.eot');
-  src: url('hooray.eot?#iefix') format('eot'),
-  url('hooray.woff') format('woff'),
-  url('hooray.ttf') format('truetype'),
-  url('hooray.svg#webfontjKg17VrE') format('svg');
-  }
 html,body{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

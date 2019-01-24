@@ -284,14 +284,14 @@
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
-        context.font='30px STKaiti';
+        context.font='30px KaitiMobile';
         context.textAlign='left';
         context.fillStyle='#724079';
         context.fillText(toNameVal,40,372);
         
         drawText(context,blessValStr,40,428,328);
         // context.fillText(blessVal,158,400,'50px');
-        context.font='30px STKaiti';
+        context.font='30px KaitiMobile';
         context.textAlign='right';
         context.fillStyle='#724079';
         context.fillText(fromNameVal,368,556);
@@ -314,7 +314,7 @@
       var temp = "";              
       var row = [];
   
-      context.font='30px STKaiti';
+      context.font='30px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle='#724079';
