@@ -230,7 +230,7 @@
       
       oFReader.readAsDataURL(oFile);
       var orient =  getPhotoOrientation(oFile);
-      alert(orient);
+      // alert(orient);
       if (orient == 6) {
         a = 90 * Math.PI / 180;
       }
@@ -358,6 +358,7 @@
     //    },300);
     // };
     function getPhotoOrientation(img){
+      alert(11111);
       var orient;
       EXIF.getData(img, function () {
           orient = EXIF.getTag(this, 'Orientation');
