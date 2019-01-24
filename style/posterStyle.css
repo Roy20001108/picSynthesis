@@ -197,7 +197,6 @@ ul,li{
   left: 100px;
   width: 328px;
   color: #724079;
-  font-weight: bold;
   visibility: hidden;
 }
 #blessTwoDiv {
@@ -208,7 +207,6 @@ ul,li{
   left: 150px;
   width: 466px;
   color: #ffcc66;
-  font-weight: bold;
   visibility: hidden;
 }
 #blessThreeDiv{
@@ -219,7 +217,6 @@ ul,li{
   left: 170px;
   width: 406px;
   color: #ffffff;
-  font-weight: bold;
   visibility: hidden;
 }
 #blessFourDiv{
@@ -230,7 +227,6 @@ ul,li{
   left: 150px;
   width: 474px;
   color:  #660066;
-  font-weight: bold;
   visibility: hidden;
 }
 .blessTemplate {
@@ -240,7 +236,6 @@ ul,li{
 .inputStyle {
   background-color: transparent;
   font-size: 30px;
-  font-weight: bold;
   height: 36px;
   line-height: 36px;
   outline: none;
