@@ -1,3 +1,8 @@
+@font-face {
+  font-family:'KaitiMobile';
+  src: url("../font/STKaiti.ttf");
+  src: url("../font/STKaiti.ttf") format('truetype');
+}
 html,body{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -184,7 +189,7 @@ ul,li{
   color: #ffffff !important;
 }
 #blessOneDiv {
-  font-family: "STKaiti";
+  font-family: "KaitiMobile";
   font-size: 30px;
   position: absolute;
   top: 372px;
@@ -195,7 +200,7 @@ ul,li{
   visibility: hidden;
 }
 #blessTwoDiv {
-  font-family: "STKaiti";
+  font-family: "KaitiMobile";
   font-size: 28px;
   position: absolute;
   top: 152px;
@@ -206,7 +211,7 @@ ul,li{
   visibility: hidden;
 }
 #blessThreeDiv{
-  font-family: "STKaiti";
+  font-family: "KaitiMobile";
   font-size: 28px;
   position: absolute;
   top: 306px;
@@ -217,7 +222,7 @@ ul,li{
   visibility: hidden;
 }
 #blessFourDiv{
-  font-family: "STKaiti";
+  font-family: "KaitiMobile";
   font-size: 28px;
   position: absolute;
   top: 496px;
@@ -238,7 +243,7 @@ ul,li{
   height: 36px;
   line-height: 36px;
   outline: none;
-  font-family: "STKaiti";
+  font-family: "KaitiMobile";
   border: 1px solid #bfbfbf;
 }
 .inputOneStyle {
@@ -322,10 +327,7 @@ ul,li{
 .loading img{
   display: block;
 }
-@font-face {
-  font-family:'STKaiti';
-  src: url(font/STKaiti.ttf) format(‘truetype’);
-}
+
 
 /* #progressbar{
   position: absolute;
