@@ -278,19 +278,23 @@
       var toNameVal = $("input[name='toName']").val();
       var fromNameVal = $("input[name='fromName']").val();
       var blessVal = $(".blessTemplate").html();
+      var blessValStr = "  " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
+      // alert(blessValStr);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!=''){
         context.font='30px STKaiti';
         context.textAlign='left';
-        context.textBaseline='middle';
-        context.fillStyle='#7B60AA';
-        context.fillText(toNameVal,158,300);
-        drawText(context,blessVal,158,400,328);
+        context.fillStyle='#724079';
+        context.fillText(toNameVal,40,372);
+        
+        drawText(context,blessValStr,40,428,328);
         // context.fillText(blessVal,158,400,'50px');
+        context.font='30px STKaiti';
         context.textAlign='right';
-        context.fillText(fromNameVal,158,700);
+        context.fillStyle='#724079';
+        context.fillText(fromNameVal,368,556);
         // context.fillText(inputwd,458,18);
   
         document.getElementById('makePhoster').style.display='none';
@@ -310,9 +314,10 @@
       var temp = "";              
       var row = [];
   
-      // context.font = "20px Arial";
-      // context.fillStyle = "black";
-      // context.textBaseline = "middle";
+      context.font='30px STKaiti';
+      context.textAlign='left';
+      context.textBaseline='middle';
+      context.fillStyle='#724079';
   
       for(var a = 0; a < chr.length; a++){
   
@@ -327,7 +332,7 @@
       row.push(temp);
   
       for(var b = 0; b < row.length; b++){
-          context.fillText(row[b],x,y+(b+1)*24);//字体20，间隔24。类似行高
+          context.fillText(row[b],x,y+(b+1)*35);//字体20，间隔24。类似行高
       }
   
       // 只显示2行，加...
