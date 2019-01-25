@@ -1,10 +1,10 @@
 (function(global){
   var bgdata;
   var orient;
-  var bgdata1 = "image/templateLg_1.png";
-  var bgdata2 = "image/templateLg_2.png";
-  var bgdata3 = "image/templateLg_3.png";
-  var bgdata4 = "image/templateLg_4.png";
+  var bgdata1 = "image/templateBig1.png";
+  var bgdata2 = "image/templateBig2.png";
+  var bgdata3 = "image/templateBig3.png";
+  var bgdata4 = "image/templateBig4.png";
   var imgArry = $("img");
   // var imgArry = ["image/templateLg_1.png", "image/templateLg_2.png", "image/templateLg_3.png", "image/templateLg_4.png","image/big_box.png", "image/templateMini_1.png", "image/templateMini_2.png","image/templateMini_3.png","image/templateMini_4.png"];
   var selectImgFlag = 0;
