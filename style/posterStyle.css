@@ -232,14 +232,14 @@ ul,li{
   font-family: "Kaiti";
   font-size: 27px;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 20%;
   width: 62%;
   color:  #660066;
   visibility: hidden;
 }
-#blessThreeDiv p{
-  margin: 20px 0 5px 0;
+#blessFourDiv p{
+  margin: 15px 0 6px 0;
 }
 .blessTemplate {
   display:none;
