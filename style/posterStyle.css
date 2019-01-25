@@ -29,10 +29,10 @@ ul,li{
   left:0;
 } */
 #makePhoster{ 
-  display:block
+  display:none
 }
 #createPhoster{ 
-  display:none
+  display:block
 }
 .templateDiv {
   position: relative;
@@ -336,7 +336,26 @@ ul,li{
   display: block;
 }
 
-
+.imgwrapper{
+  background-color: #F1F1F1;
+  text-align: center
+}
+.imgwrapper img {
+  margin: 40px 60px 0 60px;
+}
+.imgwrapper p {
+  font-size: 32px;
+  color: #7B60AA;
+  margin: 20px 0;
+}
+.imgwrapper button {
+  font-size: 28px;
+  color: #ffffff;
+  height: 80px;
+  line-height: 80px;
+  width: 630px;
+  background-color: #7B60AA;
+}
 /* #progressbar{
   position: absolute;
   top:50%;

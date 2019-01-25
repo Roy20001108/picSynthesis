@@ -353,7 +353,11 @@
           context.fillText(str,x,y+(b+1)*24);
       }*/
   }
-  
+  // 制作下一张
+  $("#saveBtn").onclick = function(){
+    document.getElementById('makePhoster').style.display='block';
+    document.getElementById('createPhoster').style.display='none';     
+  }
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){
     //       document.getElementById('content1').style.display='block';
