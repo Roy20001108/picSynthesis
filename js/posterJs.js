@@ -292,20 +292,26 @@
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
-      if(inputimg!=''){
-        context.font='30px KaitiMobile';
-        context.textAlign='left';
-        context.fillStyle='#724079';
-        context.fillText(toNameVal,40,372);
+      if(inputimg!='' && selectImgFlag == 0){
+        if (selectImgFlag == 0){
+          drawToName(context,45,375,'#724079');
+          var rownum = drawText(context,blessValStr,35,420,328,'#724079');
+          drawFromName(context,365,(420 + rownum * 40 + 20),'#724079');
+        } else if (selectImgFlag == 1) {
+          drawToName(context,45,375,'#ffcc66');
+          drawText(context,blessValStr,40,428,328,'#ffcc66');
+          drawFromName();
+        } else if (selectImgFlag == 2) {
+          drawToName(context,45,375,'#ffffff');
+          drawText(context,blessValStr,40,428,328,'#ffffff');
+          drawFromName();
+        } else {
+          drawToName(context,45,375,'#660066');
+          drawText(context,blessValStr,40,428,328,'#660066');
+          drawFromName();
+        }
         
-        drawText(context,blessValStr,40,428,328);
-        // context.fillText(blessVal,158,400,'50px');
-        context.font='30px KaitiMobile';
-        context.textAlign='right';
-        context.fillStyle='#724079';
-        context.fillText(fromNameVal,368,556);
-        // context.fillText(inputwd,458,18);
-  
+        
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
   
@@ -317,16 +323,28 @@
       }
       
     }
-    function drawText(context,t,x,y,w){
+    function drawToName(context,x,y,c){
+      context.font='bold 27px Kaiti';
+      context.textAlign='right';
+      context.fillStyle= c;
+      context.fillText(toNameVal,x,y);
+    }
+    function drawFromName(context,x,y,c){
+      context.font='bold 27px Kaiti';
+      context.textAlign='left';
+      context.fillStyle=c;
+      context.fillText(fromNameVal,x,y);
+    }
+    function drawText(context,t,x,y,w,c){
 
       var chr = t.split("");
       var temp = "";              
       var row = [];
   
-      context.font='30px KaitiMobile';
+      context.font='bold 27px Kaiti';
       context.textAlign='left';
       context.textBaseline='middle';
-      context.fillStyle='#724079';
+      context.fillStyle=c;
   
       for(var a = 0; a < chr.length; a++){
   
@@ -341,9 +359,9 @@
       row.push(temp);
   
       for(var b = 0; b < row.length; b++){
-          context.fillText(row[b],x,y+(b+1)*35);//字体20，间隔24。类似行高
+          context.fillText(row[b],x,y+(b+1)*40);//字体20，间隔24。类似行高
       }
-  
+      return row.length;
       // 只显示2行，加...
       /*for(var b = 0; b < 2; b++){
           var str = row[b];
@@ -354,7 +372,7 @@
       }*/
   }
   // 制作下一张
-  $("#saveBtn").onclick = function(){
+  document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
     document.getElementById('createPhoster').style.display='none';     
   }
