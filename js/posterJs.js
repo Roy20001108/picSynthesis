@@ -234,7 +234,7 @@
         orient = EXIF.getTag(this, 'Orientation');
         alert(orient);
         if (orient == 6) {
-          a = 90 * Math.PI / 180;
+          oFile.rotation = 90 * Math.PI / 180;
         }
       });
       
