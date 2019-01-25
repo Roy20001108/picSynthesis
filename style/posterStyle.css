@@ -29,10 +29,10 @@ ul,li{
   left:0;
 } */
 #makePhoster{ 
-  display:none
+  display:block;
 }
 #createPhoster{ 
-  display:block
+  display:none;
 }
 .templateDiv {
   position: relative;
