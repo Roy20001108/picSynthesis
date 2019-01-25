@@ -296,7 +296,7 @@
         if (selectImgFlag == 0){
           drawToName(context,toNameVal,45,375,'#724079');
           var rownum = drawText(context,blessValStr,35,420,328,'#724079');
-          // drawFromName(context,fromNameVal,365,(420 + rownum * 40 + 20),'#724079');
+          drawFromName(context,fromNameVal,365,(420 + rownum * 40 + 20),'#724079');
         } else if (selectImgFlag == 1) {
           drawToName(context,45,375,'#ffcc66');
           drawText(context,blessValStr,40,428,328,'#ffcc66');
@@ -315,9 +315,9 @@
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
   
-        //  var imgDatadahe = getCanvas.toDataURL().replace("image/png", "image/octet-stream");
-        //    document.getElementById('show').src=imgDatadahe;
-        //    console.log('imgDatadahe：'+imgDatadahe);
+         var imgDatadahe = getCanvas.toDataURL().replace("image/png", "image/octet-stream");
+           document.getElementById('show').src=imgDatadahe;
+           console.log('imgDatadahe：'+imgDatadahe);
       }else{
         alert('请上传图片');
       }
