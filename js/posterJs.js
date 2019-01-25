@@ -185,6 +185,7 @@
         /*图片初始位置*/
         var fx=760/2;
         var fy=662/2;
+        // var fa=0;
     
         /*注：上传图片，放大缩小倍数需要除以2；设计稿中头像左上角，距内容区左上角距离，依然也需要除以2（横坐标除以2，纵坐标除以2）*/
     
@@ -192,8 +193,8 @@
         elePos.s=sizescale;
         elePos.x=fx;
         elePos.y=fy;
-    
-        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
+        alert(elePos.a)
+        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = 90, imgthis.x = fx, imgthis.y = fy;
         stage.addChild(imgthis);
         stage.swapChildren(bg, imgthis);
         stage.update();
@@ -228,11 +229,9 @@
         alert("You must select a valid image file!");
         return;
       }
-      alert(1111);
       oFReader.readAsDataURL(oFile);
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
-        alert(orient);
         if (orient == 6) {
           oFile.rotation = 90 * Math.PI / 180;
         }
