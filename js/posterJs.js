@@ -21,6 +21,7 @@
         processBar = document.getElementById('fill'),
         widthPercentage = Math.round(num/$("img").size()*100);
         processBar.style.width = widthPercentage + '%';
+        alert(widthPercentage);
         $("#percentVal").html("心意值正在加载" + parseInt(num/$("img").size()*100)+"%");
         // $(".loading b").html(parseInt(num/$("img").size()*100)+"%");//改变b标签的内容，用num除以img的个数，再乘以100，再取整，这就是加载的百分数
             if(num >= i){
