@@ -319,20 +319,53 @@
         } else if (selectImgFlag == 1) {
           var toNameVal = $("input[name='toNameTwo']").val();
           var fromNameVal = $("input[name='fromNameTwo']").val();
+          var rownum;
           drawToName(context,toNameVal,88,165,'#ffcc66');
-          var rownum = drawText(context,blessValStr,88,187,438,'#ffcc66');
+          if (customFlag) {
+            var customWidth = document.getElementsByClassName("textArea")[1].style.width;
+            if (customWidth == '100%') {
+              customWidth = '438';
+            } else {
+              customWidth = parseFloat(customWidth);
+            }
+            rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
+          } else {
+            rownum = drawText(context,blessValStr,88,187,438,'#ffcc66');
+          }
           drawFromName(context,fromNameVal,420,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
+          var rownum;
           drawToName(context,toNameVal,125,330,'#ffffff');
-          var rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
+          if (customFlag) {
+            var customWidth = document.getElementsByClassName("textArea")[2].style.width;
+            if (customWidth == '100%') {
+              customWidth = '390';
+            } else {
+              customWidth = parseFloat(customWidth);
+            }
+            rownum = drawText(context,blessValCustom,125,355,customWidth,'#ffffff');
+          } else {
+            rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
+          }
           drawFromName(context,fromNameVal,440,(355 + rownum * 50 + 30),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
+          var rownum;
           drawToName(context,toNameVal,85,490,'#660066');
-          var rownum = drawText(context,blessValStr,85,515,448,'#660066');
+          if (customFlag) {
+            var customWidth = document.getElementsByClassName("textArea")[3].style.width;
+            if (customWidth == '100%') {
+              customWidth = '448';
+            } else {
+              customWidth = parseFloat(customWidth);
+            }
+            rownum = drawText(context,blessValCustom,85,515,customWidth,'#660066');
+          } else {
+            rownum = drawText(context,blessValStr,85,515,448,'#660066');
+          }
           drawFromName(context,fromNameVal,450,(515 + rownum * 50 + 30),'#660066');
         }
         document.getElementById('makePhoster').style.display='none';
