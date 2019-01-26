@@ -284,11 +284,12 @@
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
-      var toNameVal = $(".toNameStyle").html();
-      var fromNameVal = $(".fromNameStyle").html();
+      var toNameVal = $(".toNameStyle").val();
+      var fromNameVal = $(".fromNameStyle").val();
       var blessVal = $(".blessTemplate").html();
       var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
-      alert(blessValStr);
+      alert(toNameVal);
+      alert(fromNameVal);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
