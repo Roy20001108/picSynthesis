@@ -173,7 +173,7 @@
   var imgthis;
     // 上传图片
     function upLoadImg (stage,bg) {
-      alert("上传")
+      alert("上传11")
       oFReader.onload = function(oFREvent) {
         stage.removeChild(imgthis);
         imgthis = new createjs.Bitmap(oFREvent.target.result);
@@ -200,8 +200,8 @@
         // console.log(fx,fy);
         if (orient == 6) {
           alert(orient);
-          var fx=662/2;
-          var fy=760/2;
+          var fx=100/2;
+          var fy=100/2;
           elePos.s=sizescale;
           elePos.x=fx;
           elePos.y=fy;
@@ -209,7 +209,7 @@
         } else {
           alert(33333);
           var fx=760/2;
-          var fy=662/2;
+          var fy=562/2;
           elePos.s=sizescale;
           elePos.x=fx;
           elePos.y=fy;
