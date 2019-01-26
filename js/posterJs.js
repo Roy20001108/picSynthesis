@@ -290,7 +290,7 @@
       var blessVal = $(".blessTemplate").html();
       var blessValCustom = $(".textArea").html();
       blessValCustom = blessValCustom.substr(0,blessValCustom.indexOf('<img'));
-      var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
+      var blessValStr = "    " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
@@ -307,8 +307,6 @@
               } else {
                 customWidth = parseFloat(customWidth);
               }
-              alert(blessValCustom);
-              alert(customWidth);
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
