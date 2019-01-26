@@ -14,12 +14,10 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },300);
+        },1);
     }
 };
 progressbar.init();
-initPage();
-function initPage() {
   var bgdata;
   var orient;
   var customFlag;
@@ -471,8 +469,17 @@ function initPage() {
   // 制作下一张
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
-    document.getElementById('createPhoster').style.display='none'; 
-    initPage();
+    document.getElementById('createPhoster').style.display='none';
+  //   document.getElementById('inputimg').style.zIndex = 100;
+  //   document.getElementById('gesture-area').style.zIndex = 99;
+  //   document.getElementById('upimg').style.visibility="visible";
+  //   document.getElementById('inputimg').val = " ";
+  //  $(".toNameStyle").val("");
+  //   $(".fromNameStyle").val("");
+
+    window.location.reload();
+    // $(".loading").fadeOut();
+    // document.getElementById('makePhoster').style.display='block';   
   }
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){
@@ -549,6 +556,4 @@ function initPage() {
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
       return isAndroid;
     }
-}
-  
 })(window);
