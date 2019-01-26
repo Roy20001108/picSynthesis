@@ -447,7 +447,8 @@ progressbar.init();
 
           }//context.measureText(text).width  测量文本text的宽度
           else{
-            if(judgePunctuationMarks(chr[a])){
+            var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
+            if(!reg.test(chr[a])){
               temp += chr[a];
               row.push(temp);
             }else{
