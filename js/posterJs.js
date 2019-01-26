@@ -294,7 +294,7 @@
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
             drawToName(context,toNameVal,35,378,'#724079');
-            var rownum = drawText(context,blessValStr,35,420,328,'#724079');
+            var rownum = drawText(context,blessValStr,35,420,330,'#724079');
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
           }else{
             alert('请上传图片');
@@ -304,7 +304,7 @@
           var toNameVal = $("input[name='toNameTwo']").val();
           var fromNameVal = $("input[name='fromNameTwo']").val();
           drawToName(context,toNameVal,88,165,'#ffcc66');
-          var rownum = drawText(context,blessValStr,88,187,430.8,'#ffcc66');
+          var rownum = drawText(context,blessValStr,88,187,435,'#ffcc66');
           drawFromName(context,fromNameVal,420,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
