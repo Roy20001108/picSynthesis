@@ -35,11 +35,11 @@ ul,li{
   border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv {
-  height: 17%;
+  height: 180px;
   border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv img {
-  margin: 6% 3.3%;
+  margin: 30px 3.3%;
   border-bottom: 6px solid transparent;
 }
 .tabDiv {
