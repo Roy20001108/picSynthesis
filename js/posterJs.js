@@ -2,7 +2,7 @@
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "image/templateBig1.png";
+  var bgdata1 = "";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
@@ -91,10 +91,16 @@
   $(".blessBtn").click(function() {
     $('.scrollDiv span').removeClass('selectFont');
     controlHide();
-    // po_Last_Div($(".textArea"));
+    // document.getElementById("textAreaOne").innerText = '';
+    // $(".textArea").text("");
+    // $(".textArea").setSelectionRange(0, 0);
     $(".blessTemplate").hide();
     $(".textArea").show();
     customFlag = true;
+    // rangeValOne();
+    // rangeValTwo();
+    // rangeValThree();
+    // rangeValFour();
     areaMove();
   });
   function controlHide () {
@@ -167,10 +173,10 @@
   var imgthis;
     // 上传图片
     function upLoadImg (stage,bg) {
-      
-     
+      alert("上传")
       oFReader.onload = function(oFREvent) {
         stage.removeChild(imgthis);
+        alert(JSON.stringify(oFREvent.target));
         imgthis = new createjs.Bitmap(oFREvent.target.result);
         //document.getElementById('show').src=oFREvent.target.result;
         var image=new Image();
@@ -197,8 +203,9 @@
         elePos.s=sizescale;
         elePos.x=fx;
         elePos.y=fy;
-        alert(elePos.a)
-        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = 90, imgthis.x = fx, imgthis.y = fy;
+        elePos.a=90;
+        alert(orient); 
+        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
         stage.addChild(imgthis);
         stage.swapChildren(bg, imgthis);
         stage.update();
@@ -236,9 +243,6 @@
       oFReader.readAsDataURL(oFile);
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
-        if (orient == 6) {
-          oFile.rotation = 90 * Math.PI / 180;
-        }
       });
       
     };
@@ -446,22 +450,65 @@
     //       orient = EXIF.getTag(this, 'Orientation');
     //   });
     // }
+    // var textAreaCon;
+    // function rangeValOne () {
+    //   $("#textAreaOne").on('keydown keyup', function () {
+    //   var t = document.getElementById("textAreaOne").innerText;
+    //   if (t.length > 20) {
+    //       document.getElementById("textAreaOne").innerText = t.substring(0, 20);
+    //       keyAction(textAreaOne)
+    //     }
+    // });
+    // }
+    // function rangeValTwo () {
+    //   $("#textAreaTwo").on('keydown keyup', function () {
+    //   var t = document.getElementById("textAreaTwo").innerText;
+    //   if (t.length > 20) {
+    //       document.getElementById("textAreaTwo").innerText = t.substring(0, 20);
+    //       keyAction(textAreaTwo)
+    //     }
+    // });
+    // }
+    // function rangeValThree () {
+    //   $("#textAreaThree").on('keydown keyup', function () {
+    //   var t = document.getElementById("textAreaThree").innerText;
+    //   if (t.length > 20) {
+    //       document.getElementById("textAreaThree").innerText = t.substring(0, 20);
+    //       keyAction(textAreaThree)
+    //     }
+    // });
+    // }
+    // function rangeValFour () {
+    //   $("#textAreaFour").on('keydown keyup', function () {
+    //   var t = document.getElementById("textAreaFour").innerText;
+    //   if (t.length > 20) {
+    //       document.getElementById("textAreaFour").innerText = t.substring(0, 20);
+    //       keyAction(textAreaFour)
+    //     }
+    // });
+    // }
+    
     //定位div(contenteditable = "true")光标
-    function po_Last_Div(obj) {
-      if (window.getSelection) {//ie11 10 9 ff safari
-          obj.focus(); //解决ff不获取焦点无法定位问题
-          var range = window.getSelection();//创建range
-          range.selectAllChildren(obj);//range 选择obj下所有子内容
-          range.collapseToEnd();//光标移至最后
+    function getC(that){			
+      if(document.all){				
+        that.range=document.selection.createRange();				
+        that.range.select();				
+        that.range.moveStart("character",-1); 			
+      }else{				
+        that.range=window.getSelection().getRangeAt(0);				
+        that.range.setStart(that.range.startContainer,2);			
+      }	
+    }
+    function keyAction(obj) {
+ 
+      var textbox = document.getElementById('obj');
+      var sel = window.getSelection();
+      var range = document.createRange();
+      // range.selectNodeContents(textbox);
+      range.collapse(false);
+      sel.removeAllRanges();
+      sel.addRange(range);
       }
-      else if (document.selection) {//ie10 9 8 7 6 5
-          var range = document.selection.createRange();//创建选择对象
-          //var range = document.body.createTextRange();
-          range.moveToElementText(obj);//range定位到obj
-          range.collapse(false);//光标移至最后
-          range.select();
-      }
-  }
     function isAndroid(){
       var u = navigator.userAgent;
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
