@@ -436,23 +436,27 @@ progressbar.init();
       var temp = "";              
       var row = [];
   
-      context.font='bold 26px KaitiMobile';
+      context.font='bold 27px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle=c;
   
       for(var a = 0; a < chr.length; a++){
-  
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
-              temp += chr[a];
+            temp += chr[a];
+
           }//context.measureText(text).width  测量文本text的宽度
           else{
+            if(judgePunctuationMarks(chr[a])){
+              temp += chr[a];
+              row.push(temp);
+            }else{
               row.push(temp);
               temp = chr[a];
+            }
           }
       }
       row.push(temp);
-  
       for(var b = 0; b < row.length; b++){
           context.fillText(row[b],x,y+(b+1)*40);//字体20，间隔24。类似行高
       }
