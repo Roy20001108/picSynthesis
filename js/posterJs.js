@@ -469,7 +469,9 @@ progressbar.init();
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
     document.getElementById('createPhoster').style.display='none'; 
-    window.location.reload();   
+    window.location.reload();
+    $(".loading").fadeOut();
+    document.getElementById('makePhoster').style.display='block';   
   }
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){
