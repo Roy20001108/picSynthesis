@@ -1,6 +1,7 @@
 (function(global){
   var bgdata;
   var orient;
+  var customFlag;
   var bgdata1 = "image/templateBig1.png";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
@@ -84,6 +85,7 @@
     controlHide();
     $(".blessTemplate").show();
     $(".textArea").hide();
+    customFlag = false;
   });
   // 添加文字
   $(".blessBtn").click(function() {
@@ -91,6 +93,7 @@
     controlHide();
     $(".blessTemplate").hide();
     $(".textArea").show();
+    customFlag = true;
     areaMove();
   });
   function controlHide () {
@@ -285,6 +288,8 @@
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
       var blessVal = $(".blessTemplate").html();
+      var blessValCustom = $(".textArea").html();
+      blessValCustom = blessValCustom.substr(0,blessValCustom.indexOf('<img'));
       var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
@@ -293,8 +298,15 @@
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
+            var rownum;
             drawToName(context,toNameVal,34,380,'#724079');
-            var rownum = drawText(context,blessValStr,35,420,336,'#724079');
+            if (customFlag) {
+              alert("自定义");
+              var customWidth = $(".textArea").style.width;
+              rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
+            } else {
+              rownum = drawText(context,blessValStr,35,420,336,'#724079');
+            }
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
           }else{
             alert('请上传图片');
@@ -315,9 +327,9 @@
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
-          drawToName(context,toNameVal,85,500,'#660066');
-          var rownum = drawText(context,blessValStr,85,525,445,'#660066');
-          drawFromName(context,fromNameVal,450,(525 + rownum * 50 + 30),'#660066');
+          drawToName(context,toNameVal,85,490,'#660066');
+          var rownum = drawText(context,blessValStr,85,515,448,'#660066');
+          drawFromName(context,fromNameVal,450,(515 + rownum * 50 + 30),'#660066');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
