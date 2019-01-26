@@ -41,12 +41,12 @@ ul,li{
   border-bottom: 6px solid transparent;
 }
 .tabDiv {
-  height: 8%;
+  height: 9%;
   font-size: 28px;
   color: #B0A0CC;
 }
 .tabItem {
-  padding: 0 3%;
+  padding: 0 2%;
   overflow: hidden;
 }
 .tabItem span {
