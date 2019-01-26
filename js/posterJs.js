@@ -382,7 +382,7 @@
     }
     function drawFromName(context,t,x,y,c){
       context.font='bold 27px Kaiti';
-      context.textAlign='left';
+      context.textAlign='right';
       context.fillStyle=c;
       context.fillText(t,x,y);
     }
