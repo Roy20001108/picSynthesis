@@ -302,7 +302,7 @@
             drawToName(context,toNameVal,34,380,'#724079');
             if (customFlag) {
               alert(blessValCustom);
-              var customWidth = $(".textArea").style.width;
+              var customWidth = document.getElementsByClassName("textArea").style.width[0];
               alert(customWidth);
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
