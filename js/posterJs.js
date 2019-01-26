@@ -311,13 +311,13 @@
           var fromNameVal = $("input[name='fromNameThree']").val();
           drawToName(context,toNameVal,125,330,'#ffffff');
           var rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
-          drawFromName(context,fromNameVal,440,(355 + rownum * 50 + 20),'#ffffff');
+          drawFromName(context,fromNameVal,440,(355 + rownum * 50 + 30),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
-          drawToName(context,45,375,'#660066');
-          drawText(context,blessValStr,40,428,328,'#660066');
-          drawFromName();
+          drawToName(context,toNameVal,85,500,'#660066');
+          var rownum = drawText(context,blessValStr,85,525,445,'#660066');
+          drawFromName(context,fromNameVal,450,(525 + rownum * 50 + 30),'#660066');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
