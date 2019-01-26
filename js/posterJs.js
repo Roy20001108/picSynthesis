@@ -288,9 +288,7 @@
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
       var blessVal = $(".blessTemplate").html();
-      var blessValCustom = $(".textArea").html();
-      blessValCustom = blessValCustom.substr(0,blessValCustom.indexOf('<img'));
-      var blessValStr = "    " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
+      var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
@@ -307,6 +305,8 @@
               } else {
                 customWidth = parseFloat(customWidth);
               }
+              var blessValCustom =$("#textAreaOne").text();
+              blessValCustom = blessValCustom.replace(/\s/g,""); 
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
@@ -328,6 +328,8 @@
             } else {
               customWidth = parseFloat(customWidth);
             }
+            var blessValCustom = $("#textAreaTwo").text();
+            blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
             rownum = drawText(context,blessValStr,88,187,438,'#ffcc66');
@@ -345,6 +347,8 @@
             } else {
               customWidth = parseFloat(customWidth);
             }
+            var blessValCustom = $("#textAreaThree").text();
+            blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,125,355,customWidth,'#ffffff');
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
@@ -362,6 +366,8 @@
             } else {
               customWidth = parseFloat(customWidth);
             }
+            var blessValCustom = $("#textAreaFour").text();
+            blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,85,515,customWidth,'#660066');
           } else {
             rownum = drawText(context,blessValStr,85,515,448,'#660066');
