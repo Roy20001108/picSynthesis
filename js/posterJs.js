@@ -436,7 +436,7 @@ progressbar.init();
       var temp = "";              
       var row = [];
   
-      context.font='bold 27px KaitiMobile';
+      context.font='bold 26px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle=c;
@@ -477,7 +477,7 @@ progressbar.init();
   //  $(".toNameStyle").val("");
   //   $(".fromNameStyle").val("");
 
-    window.location.reload();
+    // window.location.reload();
     // $(".loading").fadeOut();
     // document.getElementById('makePhoster').style.display='block';   
   }
