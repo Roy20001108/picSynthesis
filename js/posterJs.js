@@ -301,7 +301,7 @@
             alert('请上传图片');
           }
         } else if (selectImgFlag == 1) {
-          drawToName(context,88,180,'#ffcc66');
+          drawToName(context,toNameVal,88,180,'#ffcc66');
           var rownum = drawText(context,blessValStr,88,206,438,'#ffcc66');
           drawFromName(context,fromNameVal,350,(206 + rownum * 50 + 60),'#ffcc66');
         } else if (selectImgFlag == 2) {
