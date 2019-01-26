@@ -307,11 +307,12 @@
               }
               var blessValCustom =$("#textAreaOne").text();
               blessValCustom = blessValCustom.replace(/\s/g,""); 
+              alert(blessValCustom);
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
-            drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
+            drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
           // }else{
           //   alert('请上传图片');
           //   return;
@@ -334,7 +335,7 @@
           } else {
             rownum = drawText(context,blessValStr,88,187,438,'#ffcc66');
           }
-          drawFromName(context,fromNameVal,420,(187 + rownum * 50 + 30),'#ffcc66');
+          drawFromName(context,fromNameVal,435,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -353,7 +354,7 @@
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,440,(355 + rownum * 50 + 30),'#ffffff');
+          drawFromName(context,fromNameVal,390,(355 + rownum * 50 + 30),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
