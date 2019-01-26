@@ -295,24 +295,27 @@
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
         if (selectImgFlag == 0){
-          if(inputimg!=''){
+          // if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
             var rownum;
             drawToName(context,toNameVal,34,380,'#724079');
             if (customFlag) {
-              alert(blessValCustom);
-              var customWidth = document.getElementsByClassName("textArea").style.width[0];
-              alert(customWidth);
+              var customWidth = document.getElementsByClassName("textArea")[0].style.width;
+              if (customWidth == '100%') {
+                customWidth = '336';
+              } else {
+                customWidth = parseFloat(customWidth);
+              }
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
-          }else{
-            alert('请上传图片');
-            return;
-          }
+          // }else{
+          //   alert('请上传图片');
+          //   return;
+          // }
         } else if (selectImgFlag == 1) {
           var toNameVal = $("input[name='toNameTwo']").val();
           var fromNameVal = $("input[name='fromNameTwo']").val();
