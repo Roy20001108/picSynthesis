@@ -435,7 +435,7 @@ progressbar.init();
       var chr = t.split("");
       var temp = "";              
       var row = [];
-  
+      alert(11111);
       context.font='bold 27px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
@@ -457,7 +457,6 @@ progressbar.init();
             }
           }
       }
-      alert(temp);
       row.push(temp);
       for(var b = 0; b < row.length; b++){
           context.fillText(row[b],x,y+(b+1)*40);//字体20，间隔24。类似行高
