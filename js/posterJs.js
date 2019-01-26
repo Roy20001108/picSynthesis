@@ -431,7 +431,8 @@
   // 制作下一张
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
-    document.getElementById('createPhoster').style.display='none';     
+    document.getElementById('createPhoster').style.display='none'; 
+    window.location.reload();   
   }
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){
