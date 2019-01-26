@@ -192,8 +192,7 @@
         console.log('imgWidth:'+imgWidth+';elePos.w:'+elePos.w+';scale:'+sizescale);
     
         /*图片初始位置*/
-        // var fx=760/2;
-        // var fy=662/2;
+        
         // var fa=0;
     
         /*注：上传图片，放大缩小倍数需要除以2；设计稿中头像左上角，距内容区左上角距离，依然也需要除以2（横坐标除以2，纵坐标除以2）*/
@@ -201,15 +200,19 @@
         // console.log(fx,fy);
         if (orient == 6) {
           alert(orient);
+          var fx=662/2;
+          var fy=760/2;
           elePos.s=sizescale;
-          elePos.x=560/2;
-          elePos.y=462/2;
+          elePos.x=fx;
+          elePos.y=fy;
           elePos.a=90;
         } else {
-          alert(22221);
+          alert(33333);
+          var fx=760/2;
+          var fy=662/2;
           elePos.s=sizescale;
-          elePos.x=760/2;
-          elePos.y=662/2;
+          elePos.x=fx;
+          elePos.y=fy;
           elePos.a=0;
         }
         imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
