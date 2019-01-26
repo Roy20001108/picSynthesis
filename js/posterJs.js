@@ -301,8 +301,9 @@
             var rownum;
             drawToName(context,toNameVal,34,380,'#724079');
             if (customFlag) {
-              alert("自定义");
+              alert(blessValCustom);
               var customWidth = $(".textArea").style.width;
+              alert(customWidth);
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
