@@ -12,6 +12,7 @@
   var rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
   var oFReader = new FileReader();
   // var num = 0;
+  alert("进度条加载");
   imgArry.each(function(i){//遍历获取到的所有img
     var oImg = new Image();//new一个新对象
     // oImg.onload = function(){//使用onload方法，在加载完成后执行
