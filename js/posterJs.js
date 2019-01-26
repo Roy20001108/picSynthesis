@@ -294,9 +294,9 @@
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!='' && selectImgFlag == 0){
         if (selectImgFlag == 0){
-          drawToName(context,toNameVal,95,375,'#724079');
+          drawToName(context,toNameVal,90,375,'#724079');
           var rownum = drawText(context,blessValStr,35,400,328,'#724079');
-          drawFromName(context,fromNameVal,300,(420 + rownum * 40 + 20),'#724079');
+          drawFromName(context,fromNameVal,300,(420 + rownum * 40 + 40),'#724079');
         } else if (selectImgFlag == 1) {
           drawToName(context,45,375,'#ffcc66');
           drawText(context,blessValStr,40,428,328,'#ffcc66');
@@ -325,7 +325,7 @@
     }
     function drawToName(context,t,x,y,c){
       context.font='bold 27px Kaiti';
-      context.textAlign='right';
+      context.textAlign='left';
       context.fillStyle= c;
       context.fillText(t,x,y);
     }
