@@ -334,7 +334,7 @@
           } else {
             rownum = drawText(context,blessValStr,88,187,438,'#ffcc66');
           }
-          drawFromName(context,fromNameVal,435,(187 + rownum * 50 + 30),'#ffcc66');
+          drawFromName(context,fromNameVal,510,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -353,7 +353,7 @@
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,390,(355 + rownum * 50 + 30),'#ffffff');
+          drawFromName(context,fromNameVal,510,(355 + rownum * 50 + 30),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
@@ -372,7 +372,7 @@
           } else {
             rownum = drawText(context,blessValStr,85,515,448,'#660066');
           }
-          drawFromName(context,fromNameVal,450,(515 + rownum * 50 + 30),'#660066');
+          drawFromName(context,fromNameVal,530,(515 + rownum * 50 + 30),'#660066');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
