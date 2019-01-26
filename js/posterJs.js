@@ -284,11 +284,11 @@
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
-      var toNameVal = $("input[name='toName']").val();
-      var fromNameVal = $("input[name='fromName']").val();
+      var toNameVal = $(".toNameStyle").html();
+      var fromNameVal = $(".fromNameStyle").html();
       var blessVal = $(".blessTemplate").html();
       var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
-      // alert(blessValStr);
+      alert(blessValStr);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
@@ -302,7 +302,7 @@
           }
         } else if (selectImgFlag == 1) {
           drawToName(context,toNameVal,88,180,'#ffcc66');
-          var rownum = drawText(context,blessValStr,88,206,438,'#ffcc66');
+          var rownum = drawText(context,blessValStr,88,206,430,'#ffcc66');
           drawFromName(context,fromNameVal,350,(206 + rownum * 50 + 60),'#ffcc66');
         } else if (selectImgFlag == 2) {
           drawToName(context,45,375,'#ffffff');
