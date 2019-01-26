@@ -294,8 +294,8 @@
       var inputimg = document.getElementById('inputimg').value;
       if(inputimg!='' && selectImgFlag == 0){
         if (selectImgFlag == 0){
-          drawToName(context,toNameVal,45,375,'#724079');
-          var rownum = drawText(context,blessValStr,35,420,328,'#724079');
+          drawToName(context,toNameVal,95,375,'#724079');
+          var rownum = drawText(context,blessValStr,35,400,328,'#724079');
           drawFromName(context,fromNameVal,365,(420 + rownum * 40 + 20),'#724079');
         } else if (selectImgFlag == 1) {
           drawToName(context,45,375,'#ffcc66');
