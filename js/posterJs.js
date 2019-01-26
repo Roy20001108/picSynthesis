@@ -293,7 +293,7 @@
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
-            drawToName(context,toNameVal,35,378,'#724079');
+            drawToName(context,toNameVal,34,380,'#724079');
             var rownum = drawText(context,blessValStr,35,420,336,'#724079');
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
           }else{
@@ -309,9 +309,9 @@
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
-          drawToName(context,45,375,'#ffffff');
-          drawText(context,blessValStr,40,428,328,'#ffffff');
-          drawFromName();
+          drawToName(context,toNameVal,125,340,'#ffffff');
+          var rownum = drawText(context,blessValStr,125,365,390,'#ffffff');
+          drawFromName(context,fromNameVal,420,(187 + rownum * 50 + 20),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
