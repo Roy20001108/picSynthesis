@@ -307,7 +307,6 @@
               }
               var blessValCustom =$("#textAreaOne").text();
               blessValCustom = blessValCustom.replace(/\s/g,""); 
-              alert(blessValCustom);
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
