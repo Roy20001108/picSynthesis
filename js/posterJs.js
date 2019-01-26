@@ -284,32 +284,37 @@
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
-      var toNameVal = $(".toNameStyle").val();
-      var fromNameVal = $(".fromNameStyle").val();
       var blessVal = $(".blessTemplate").html();
       var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
-      alert(toNameVal);
-      alert(fromNameVal);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
         if (selectImgFlag == 0){
           if(inputimg!=''){
+            var toNameVal = $("input[name='toNameOne']").val();
+            var fromNameVal = $("input[name='fromNameOne']").val();
             drawToName(context,toNameVal,35,378,'#724079');
             var rownum = drawText(context,blessValStr,35,420,328,'#724079');
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
           }else{
             alert('请上传图片');
+            return;
           }
         } else if (selectImgFlag == 1) {
+          var toNameVal = $("input[name='toNameTwo']").val();
+          var fromNameVal = $("input[name='fromNameTwo']").val();
           drawToName(context,toNameVal,88,180,'#ffcc66');
-          var rownum = drawText(context,blessValStr,88,206,430,'#ffcc66');
+          var rownum = drawText(context,blessValStr,88,206,438,'#ffcc66');
           drawFromName(context,fromNameVal,350,(206 + rownum * 50 + 60),'#ffcc66');
         } else if (selectImgFlag == 2) {
+          var toNameVal = $("input[name='toNameThree']").val();
+          var fromNameVal = $("input[name='fromNameThree']").val();
           drawToName(context,45,375,'#ffffff');
           drawText(context,blessValStr,40,428,328,'#ffffff');
           drawFromName();
         } else {
+          var toNameVal = $("input[name='toNameFour']").val();
+          var fromNameVal = $("input[name='toNameFour']").val();
           drawToName(context,45,375,'#660066');
           drawText(context,blessValStr,40,428,328,'#660066');
           drawFromName();
