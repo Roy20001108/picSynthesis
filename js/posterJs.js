@@ -370,9 +370,10 @@ progressbar.init();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
-            rownum = drawText(context,blessValStr,88,187,442,'#ffcc66');
+            rownum = drawText(context,blessValStr,88,187,445,'#ffcc66');
           }
-          drawFromName(context,fromNameVal,520,(187 + rownum * 50 + 30),'#ffcc66');
+          alert(1111);
+          drawFromName(context,fromNameVal,525,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
