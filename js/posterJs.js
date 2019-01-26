@@ -292,15 +292,18 @@
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
-      if(inputimg!='' && selectImgFlag == 0){
         if (selectImgFlag == 0){
-          drawToName(context,toNameVal,35,375,'#724079');
-          var rownum = drawText(context,blessValStr,35,420,328,'#724079');
-          drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
+          if(inputimg!=''){
+            drawToName(context,toNameVal,35,378,'#724079');
+            var rownum = drawText(context,blessValStr,35,420,328,'#724079');
+            drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
+          }else{
+            alert('请上传图片');
+          }
         } else if (selectImgFlag == 1) {
-          drawToName(context,45,375,'#ffcc66');
-          drawText(context,blessValStr,40,428,328,'#ffcc66');
-          drawFromName();
+          drawToName(context,88,180,'#ffcc66');
+          var rownum = drawText(context,blessValStr,88,206,438,'#ffcc66');
+          drawFromName(context,fromNameVal,350,(206 + rownum * 50 + 60),'#ffcc66');
         } else if (selectImgFlag == 2) {
           drawToName(context,45,375,'#ffffff');
           drawText(context,blessValStr,40,428,328,'#ffffff');
@@ -310,18 +313,11 @@
           drawText(context,blessValStr,40,428,328,'#660066');
           drawFromName();
         }
-        
-        
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
-  
-         var imgDatadahe = getCanvas.toDataURL().replace("image/png", "image/octet-stream");
-           document.getElementById('show').src=imgDatadahe;
-           console.log('imgDatadahe：'+imgDatadahe);
-      }else{
-        alert('请上传图片');
-      }
-      
+        var imgDatadahe = getCanvas.toDataURL().replace("image/png", "image/octet-stream");
+        document.getElementById('show').src=imgDatadahe;
+        console.log('imgDatadahe：'+imgDatadahe);
     }
     function drawToName(context,t,x,y,c){
       context.font='bold 27px Kaiti';
