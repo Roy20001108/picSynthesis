@@ -362,7 +362,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[1].style.width;
             if (customWidth == '100%') {
-              customWidth = '440';
+              customWidth = '445';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -391,7 +391,7 @@ progressbar.init();
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,510,(355 + rownum * 50 + 30),'#ffffff');
+          drawFromName(context,fromNameVal,520,(355 + rownum * 50 + 30),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
@@ -400,7 +400,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
-              customWidth = '450';
+              customWidth = '455';
             } else {
               customWidth = parseFloat(customWidth);
             }
