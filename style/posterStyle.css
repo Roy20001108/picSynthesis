@@ -369,7 +369,7 @@ ul,li{
 /*在进度条元素上调用动画*/
 #fill{
   height:20px;
-  animation: move 800ms infinite linear;
+  /* animation: move 5s infinite linear; */
   text-align: center;
   background-color: #7B60AA;
   border-radius: 10px;
@@ -379,7 +379,7 @@ ul,li{
   color: #7b61aa;
 }
 /*实现元素宽度的过渡动画效果*/
-@keyframes move {
+/* @keyframes move {
   0%{
       width:0;
   }
@@ -394,4 +394,4 @@ ul,li{
   100%{
       width:100%;
   }
-}
+} */

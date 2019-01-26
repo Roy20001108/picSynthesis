@@ -11,27 +11,51 @@
   var selectImgFlag = 0;
   var rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
   var oFReader = new FileReader();
-  var num = 0;
+  // var num = 0;
   imgArry.each(function(i){//遍历获取到的所有img
     var oImg = new Image();//new一个新对象
-    oImg.onload = function(){//使用onload方法，在加载完成后执行
-        oImg.onload = null;//首先清除掉缓存
-        num++;//每次加载的过程中num++，即执行次数
-        // alert(num/$("img").size()*100);
-        processBar = document.getElementById('fill'),
-        widthPercentage = Math.round(num/$("img").size()*100);
-        processBar.style.width = widthPercentage + '%';
-        alert(widthPercentage);
-        $("#percentVal").html("心意值正在加载" + parseInt(num/$("img").size()*100)+"%");
-        // $(".loading b").html(parseInt(num/$("img").size()*100)+"%");//改变b标签的内容，用num除以img的个数，再乘以100，再取整，这就是加载的百分数
-            if(num >= i){
-              processBar.style.width = 100 + '%';
-              $(".loading").fadeOut();//当num的值大于等于个数时隐藏
-              document.getElementById('makePhoster').style.display='block';
-            }
-        }
+    // oImg.onload = function(){//使用onload方法，在加载完成后执行
+      // document.getElementById('fill').style.width=0;
+      //   oImg.onload = null;//首先清除掉缓存
+      //   num++;//每次加载的过程中num++，即执行次数
+      //   // alert(num/$("img").size()*100);
+      //   processBar = document.getElementById('fill'),
+      //   widthPercentage = Math.round(num/$("img").size()*100);
+      //   processBar.style.width = widthPercentage + '%';
+      //   $("#percentVal").html("心意值正在加载" + parseInt(num/$("img").size()*100)+"%");
+      //   // alert(widthPercentage);
+      //   // $(".loading b").html(parseInt(num/$("img").size()*100)+"%");//改变b标签的内容，用num除以img的个数，再乘以100，再取整，这就是加载的百分数
+      //       // if(num >= i){
+      //       //   processBar.style.width = 100 + '%';
+      //       //   $(".loading").fadeOut();//当num的值大于等于个数时隐藏
+      //       //   document.getElementById('makePhoster').style.display='block';
+      //       // }
+      //   setTimeout(() => {
+      //     $(".loading").fadeOut();//当num的值大于等于个数时隐藏
+      //     document.getElementById('makePhoster').style.display='block';
+      //   }, 5000);
+      //   }
         oImg.src = imgArry[i].src;//预加载，先指定一个img.src，当onload成功以后可以将数据指定到某一个元素或者图片上，或者返回一个结果
     })
+  var progressbar={
+    init:function(){
+        var fill=document.getElementById('fill');
+        var count=0;
+    //通过间隔定时器实现百分比文字效果,通过计算CSS动画持续时间进行间隔设置
+        var timer=setInterval(function(e){
+            count++;
+            fill.style.width = count + '%';
+            $("#percentVal").html("心意值正在加载" + count+"%");
+            // fill.innerHTML=count+'%';
+            if(count===100) {
+              clearInterval(timer);
+              $(".loading").fadeOut();
+              document.getElementById('makePhoster').style.display='block';
+            };
+        },300);
+    }
+};
+progressbar.init();
   creatCanvas(bgdata1);
   // 点击下面tab操作
   $('#operaTab span').click(function() {
