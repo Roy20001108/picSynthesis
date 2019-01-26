@@ -435,7 +435,6 @@ progressbar.init();
       var chr = t.split("");
       var temp = "";              
       var row = [];
-      alert(11111);
       context.font='bold 27px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
@@ -450,7 +449,6 @@ progressbar.init();
             var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
             if(!reg.test(chr[a])){
               temp += chr[a];
-              row.push(temp);
             }else{
               row.push(temp);
               temp = chr[a];
