@@ -188,7 +188,7 @@ ul,li{
   position: absolute;
   top: 37%;
   left: 12.7%;
-  width: 44.5%;
+  width: 335px;
   color: #724079;
   visibility: hidden;
 }
@@ -201,7 +201,7 @@ ul,li{
   position: absolute;
   top: 14%;
   left: 20%;
-  width: 62%;
+  width: 460px;
   color: #ffcc66;
   visibility: hidden;
 }
@@ -214,7 +214,7 @@ ul,li{
   position: absolute;
   top: 30%;
   left: 24%;
-  width: 52%;
+  width: 390px;
   color: #ffffff;
   visibility: hidden;
 }
@@ -227,7 +227,7 @@ ul,li{
   position: absolute;
   top: 48%;
   left: 20%;
-  width: 62%;
+  width: 465px;
   color:  #660066;
   visibility: hidden;
 }

@@ -294,7 +294,7 @@
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
             drawToName(context,toNameVal,35,378,'#724079');
-            var rownum = drawText(context,blessValStr,35,420,330,'#724079');
+            var rownum = drawText(context,blessValStr,35,420,336,'#724079');
             drawFromName(context,fromNameVal,280,(420 + rownum * 50 + 60),'#724079');
           }else{
             alert('请上传图片');
