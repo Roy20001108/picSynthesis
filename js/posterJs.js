@@ -362,7 +362,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[1].style.width;
             if (customWidth == '100%') {
-              customWidth = '438';
+              customWidth = '440';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -370,9 +370,9 @@ progressbar.init();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
-            rownum = drawText(context,blessValStr,88,187,450,'#ffcc66');
+            rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
           }
-          drawFromName(context,fromNameVal,530,(187 + rownum * 50 + 30),'#ffcc66');
+          drawFromName(context,fromNameVal,540,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -400,7 +400,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
-              customWidth = '448';
+              customWidth = '450';
             } else {
               customWidth = parseFloat(customWidth);
             }
