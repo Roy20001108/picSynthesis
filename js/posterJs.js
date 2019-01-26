@@ -91,7 +91,7 @@
   $(".blessBtn").click(function() {
     $('.scrollDiv span').removeClass('selectFont');
     controlHide();
-    po_Last_Div($(".textArea"));
+    // po_Last_Div($(".textArea"));
     $(".blessTemplate").hide();
     $(".textArea").show();
     customFlag = true;
