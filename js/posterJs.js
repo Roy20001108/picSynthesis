@@ -1,4 +1,25 @@
 (function(global){
+  var progressbar={
+    init:function(){
+        var fill=document.getElementById('fill');
+        var count=0;
+    //通过间隔定时器实现百分比文字效果,通过计算CSS动画持续时间进行间隔设置
+        var timer=setInterval(function(e){
+            count++;
+            fill.style.width = count + '%';
+            $("#percentVal").html("心意值正在加载" + count+"%");
+            // fill.innerHTML=count+'%';
+            if(count===100) {
+              clearInterval(timer);
+              $(".loading").fadeOut();
+              document.getElementById('makePhoster').style.display='block';
+            };
+        },300);
+    }
+};
+progressbar.init();
+initPage();
+function initPage() {
   var bgdata;
   var orient;
   var customFlag;
@@ -38,25 +59,7 @@
   //       }
   //       oImg.src = imgArry[i].src;//预加载，先指定一个img.src，当onload成功以后可以将数据指定到某一个元素或者图片上，或者返回一个结果
   //   })
-  var progressbar={
-    init:function(){
-        var fill=document.getElementById('fill');
-        var count=0;
-    //通过间隔定时器实现百分比文字效果,通过计算CSS动画持续时间进行间隔设置
-        var timer=setInterval(function(e){
-            count++;
-            fill.style.width = count + '%';
-            $("#percentVal").html("心意值正在加载" + count+"%");
-            // fill.innerHTML=count+'%';
-            if(count===100) {
-              clearInterval(timer);
-              $(".loading").fadeOut();
-              document.getElementById('makePhoster').style.display='block';
-            };
-        },300);
-    }
-};
-progressbar.init();
+  
   creatCanvas(bgdata1);
   // 点击下面tab操作
   $('#operaTab span').click(function() {
@@ -469,9 +472,7 @@ progressbar.init();
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
     document.getElementById('createPhoster').style.display='none'; 
-    window.location.reload();
-    $(".loading").fadeOut();
-    document.getElementById('makePhoster').style.display='block';   
+    initPage();
   }
     // document.getElementById('close').onclick=function(){
     //    setTimeout(function(){
@@ -548,4 +549,6 @@ progressbar.init();
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
       return isAndroid;
     }
+}
+  
 })(window);
