@@ -351,7 +351,7 @@ progressbar.init();
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
           }else{
-            var register = "<p style='font-size:30px;font-weight:bold;'>请上传图片</p>";
+            var register = "<span style='color: red;'>请上传图片</span>";
             alert(register);
             return;
           }
