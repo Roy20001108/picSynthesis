@@ -14,7 +14,7 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },1);
+        },20);
     }
 };
 progressbar.init();
@@ -331,7 +331,7 @@ progressbar.init();
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
         if (selectImgFlag == 0){
-          // if(inputimg!=''){
+          if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
             var rownum;
@@ -350,10 +350,10 @@ progressbar.init();
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
-          // }else{
-          //   alert('请上传图片');
-          //   return;
-          // }
+          }else{
+            alert('请上传图片');
+            return;
+          }
         } else if (selectImgFlag == 1) {
           var toNameVal = $("input[name='toNameTwo']").val();
           var fromNameVal = $("input[name='fromNameTwo']").val();
@@ -485,7 +485,7 @@ progressbar.init();
   //  $(".toNameStyle").val("");
   //   $(".fromNameStyle").val("");
 
-    // window.location.reload();
+    window.location.reload();
     // $(".loading").fadeOut();
     // document.getElementById('makePhoster').style.display='block';   
   }
