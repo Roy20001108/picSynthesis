@@ -362,7 +362,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[1].style.width;
             if (customWidth == '100%') {
-              customWidth = '445';
+              customWidth = '450';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -372,7 +372,7 @@ progressbar.init();
           } else {
             rownum = drawText(context,blessValStr,88,187,455,'#ffcc66');
           }
-          drawFromName(context,fromNameVal,540,(187 + rownum * 50 + 30),'#ffcc66');
+          drawFromName(context,fromNameVal,550,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -400,7 +400,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
-              customWidth = '455';
+              customWidth = '460';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -446,6 +446,10 @@ progressbar.init();
 
           }//context.measureText(text).width  测量文本text的宽度
           else{
+            if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
+              row.push(temp);
+              temp = chr[a];
+            }
             var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
             if(!reg.test(chr[a]) || chr[a] == "前"){
               temp += chr[a];
