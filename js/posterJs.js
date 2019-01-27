@@ -362,7 +362,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[1].style.width;
             if (customWidth == '100%') {
-              customWidth = '470';
+              customWidth = '480';
             } else {
               customWidth = parseFloat(customWidth);
             }
