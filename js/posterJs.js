@@ -21,7 +21,7 @@ progressbar.init();
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "image/templateBig1.png";
+  var bgdata1 = "";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
@@ -351,8 +351,7 @@ progressbar.init();
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
           }else{
-            var register = "<span style='color: red;'>请上传图片</span>";
-            alert(register);
+            alert("请上传图片");
             return;
           }
         } else if (selectImgFlag == 1) {
