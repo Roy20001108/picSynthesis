@@ -482,11 +482,9 @@ progressbar.init();
   }
   // 解决iphoneX弹出键盘后页面整体上移问题
   $(".inputStyle").blur(function(){
-    alert('test');
     $('html,body').animate({scrollTop:0}, 1000);
   });
   $(".textArea").blur(function(){
-    alert('test');
     $('html,body').animate({scrollTop:0}, 1000);
   });
   // 制作下一张
