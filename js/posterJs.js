@@ -21,7 +21,7 @@ progressbar.init();
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "";
+  var bgdata1 = "image/templateBig1.png";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
