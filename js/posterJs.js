@@ -362,7 +362,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[1].style.width;
             if (customWidth == '100%') {
-              customWidth = '450';
+              customWidth = '470';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -400,7 +400,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
-              customWidth = '460';
+              customWidth = '480';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -442,15 +442,16 @@ progressbar.init();
   
       for(var a = 0; a < chr.length; a++){
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
-            temp += chr[a];
-
-          }//context.measureText(text).width  测量文本text的宽度
-          else{
             if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
               alert(111111);
               row.push(temp);
               temp = chr[a];
+            }else{
+              temp += chr[a];
             }
+          }//context.measureText(text).width  测量文本text的宽度
+          else{
+            // if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
             var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
             if(!reg.test(chr[a]) || chr[a] == "前"){
               temp += chr[a];
