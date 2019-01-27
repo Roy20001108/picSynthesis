@@ -310,9 +310,10 @@ ul,li{
   width: 170px;
   float: right;
   text-align: right;
+}
+#blessOneDiv .fromNameStyle {
   margin-right: 6%;
 }
-
 .loading{
   width: 100%;
   height: 100%;

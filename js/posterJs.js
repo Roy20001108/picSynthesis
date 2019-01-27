@@ -370,7 +370,7 @@ progressbar.init();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
-            rownum = drawText(context,blessValStr,88,187,455,'#ffcc66');
+            rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
           }
           drawFromName(context,fromNameVal,550,(187 + rownum * 50 + 30),'#ffcc66');
         } else if (selectImgFlag == 2) {
@@ -443,7 +443,6 @@ progressbar.init();
       for(var a = 0; a < chr.length; a++){
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
             if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
-              alert(111111);
               row.push(temp);
               temp = chr[a];
             }else{
@@ -451,7 +450,6 @@ progressbar.init();
             }
           }//context.measureText(text).width  测量文本text的宽度
           else{
-            // if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
             var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
             if(!reg.test(chr[a]) || chr[a] == "前"){
               temp += chr[a];
