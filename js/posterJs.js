@@ -394,7 +394,7 @@ progressbar.init();
           drawFromName(context,fromNameVal,510,(355 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
-          var fromNameVal = $("input[name='fromNameVal']").val();
+          var fromNameVal = $("input[name='fromNameFour']").val();
           var rownum;
           drawToName(context,toNameVal,85,490,'#660066');
           if (customFlag) {
@@ -408,7 +408,7 @@ progressbar.init();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,85,510,customWidth,'#660066');
           } else {
-            rownum = drawText(context,blessValStr,85,510,455,'#660066');
+            rownum = drawText(context,blessValStr,85,510,460,'#660066');
           }
           drawFromName(context,fromNameVal,530,(515 + rownum * 50 + 40),'#660066');
         }
