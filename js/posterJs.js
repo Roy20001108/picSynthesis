@@ -447,6 +447,7 @@ progressbar.init();
           }//context.measureText(text).width  测量文本text的宽度
           else{
             if (selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") {
+              alert(111111);
               row.push(temp);
               temp = chr[a];
             }
