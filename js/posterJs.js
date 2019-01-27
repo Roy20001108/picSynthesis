@@ -18,6 +18,7 @@
     }
 };
 progressbar.init();
+alert(test);
   var bgdata;
   var orient;
   var customFlag;
