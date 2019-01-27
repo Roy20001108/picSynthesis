@@ -114,16 +114,16 @@ ul,li{
 }
 #gesture-area {
   position:absolute; 
-  width: 60%;
-  height: 55%;
-  top: 0%;
-  left: 40%;
+  width: 40%;
+  height: 40%;
+  top: 12%;
+  left: 57%;
   overflow:hidden; 
   z-index:99; 
 }
 .upimg { 
   position:absolute; 
-  top:30%; 
+  top:31%; 
   left:59.5%; 
   margin: 0;
   z-index: -1;
