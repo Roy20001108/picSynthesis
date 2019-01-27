@@ -226,12 +226,12 @@ progressbar.init();
         if (orient == 6) {
           var fx=1100/2;
           var fy=300/2;
-          var fa=90
+          var fa=90;
           elePos.a=90;
         } else {
           var fx=760/2;
           var fy=362/2;
-          var fa=0
+          var fa=0;
         }
         elePos.x=760/2;
         elePos.y=362/2;
@@ -289,6 +289,7 @@ progressbar.init();
         if (typeof imgthis == 'undefined') {
           return;
         }
+        alert(event.da);
         scale = scale * (1 + event.ds);
         angle += event.da;
         x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
