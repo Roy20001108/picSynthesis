@@ -351,7 +351,8 @@ progressbar.init();
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
           }else{
-            alert('请上传图片');
+            var register = "<p style='font-size:30px;font-weight:bold;'>请上传图片</p>";
+            alert(register);
             return;
           }
         } else if (selectImgFlag == 1) {
@@ -537,7 +538,6 @@ progressbar.init();
     //     }
     // });
     // }
-    
     //定位div(contenteditable = "true")光标
     function getC(that){			
       if(document.all){				
