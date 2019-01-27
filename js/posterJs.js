@@ -226,17 +226,19 @@ progressbar.init();
         if (orient == 6) {
           var fx=1100/2;
           var fy=300/2;
-          var fa=90;
+          elePos.s=sizescale;
+          elePos.x=fx;
+          elePos.y=fy;
           elePos.a=90;
         } else {
           var fx=760/2;
           var fy=362/2;
-          var fa=0;
+          elePos.s=sizescale;
+          elePos.x=fx;
+          elePos.y=fy;
+          elePos.a=0;
         }
-        elePos.x=760/2;
-        elePos.y=362/2;
-        elePos.s=sizescale;
-        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = fa, imgthis.x = fx, imgthis.y = fy;
+        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
         stage.addChild(imgthis);
         stage.swapChildren(bg, imgthis);
         stage.update();
@@ -289,7 +291,11 @@ progressbar.init();
         if (typeof imgthis == 'undefined') {
           return;
         }
-        alert(event.da);
+        if (orient == 6) {
+          angle=90;
+        }else{
+          angle=0;
+        }
         scale = scale * (1 + event.ds);
         angle += event.da;
         x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
