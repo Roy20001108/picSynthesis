@@ -13,6 +13,7 @@
               clearInterval(timer);
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
+              // document.getElementById('createPhoster').style.display='block';
             };
         },20);
     }
@@ -479,6 +480,15 @@ progressbar.init();
           context.fillText(str,x,y+(b+1)*24);
       }*/
   }
+  // 解决iphoneX弹出键盘后页面整体上移问题
+  $(".inputStyle").blur(function(){
+    alert('test');
+    $('html,body').animate({scrollTop:0}, 1000);
+  });
+  $(".textArea").blur(function(){
+    alert('test');
+    $('html,body').animate({scrollTop:0}, 1000);
+  });
   // 制作下一张
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
