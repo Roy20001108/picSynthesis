@@ -226,19 +226,17 @@ progressbar.init();
         if (orient == 6) {
           var fx=1100/2;
           var fy=300/2;
-          elePos.s=sizescale;
-          elePos.x=fx;
-          elePos.y=fy;
+          var fa=90
           elePos.a=90;
         } else {
           var fx=760/2;
           var fy=362/2;
-          elePos.s=sizescale;
-          elePos.x=fx;
-          elePos.y=fy;
-          elePos.a=0;
+          var fa=0
         }
-        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
+        elePos.x=760/2;
+        elePos.y=362/2;
+        elePos.s=sizescale;
+        imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = fa, imgthis.x = fx, imgthis.y = fy;
         stage.addChild(imgthis);
         stage.swapChildren(bg, imgthis);
         stage.update();
