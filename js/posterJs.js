@@ -15,7 +15,7 @@
               document.getElementById('makePhoster').style.display='block';
               // document.getElementById('createPhoster').style.display='block';
             };
-        },200);
+        },300);
     }
 };
 progressbar.init();
