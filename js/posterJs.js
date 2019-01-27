@@ -391,7 +391,7 @@ progressbar.init();
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,520,(355 + rownum * 50 + 30),'#ffffff');
+          drawFromName(context,fromNameVal,510,(355 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='toNameFour']").val();
@@ -406,11 +406,11 @@ progressbar.init();
             }
             var blessValCustom = $("#textAreaFour").text();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
-            rownum = drawText(context,blessValCustom,85,515,customWidth,'#660066');
+            rownum = drawText(context,blessValCustom,85,510,customWidth,'#660066');
           } else {
-            rownum = drawText(context,blessValStr,85,515,448,'#660066');
+            rownum = drawText(context,blessValStr,85,510,450,'#660066');
           }
-          drawFromName(context,fromNameVal,530,(515 + rownum * 50 + 30),'#660066');
+          drawFromName(context,fromNameVal,530,(515 + rownum * 50 + 40),'#660066');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
