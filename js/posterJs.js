@@ -269,7 +269,7 @@ progressbar.init();
     var stageplay=1;
         /*上传图片*/
     document.getElementById('inputimg').onchange = function() {
-      document.getElementById('inputimg').style.zIndex = 1;
+      // document.getElementById('inputimg').style.zIndex = 1;
       document.getElementById('upimg').style.visibility="hidden";
         var fileObj = document.getElementById('inputimg').files[0];
       if (document.getElementById('inputimg').files.length === 0) {
