@@ -416,7 +416,7 @@ progressbar.init();
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
           var rownum;
-          drawToName(context,toNameVal,85,490,'#660066');
+          drawToName(context,toNameVal,85,490,'#521f3b');
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
