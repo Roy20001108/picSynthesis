@@ -60,6 +60,14 @@ progressbar.init();
     })
   
   creatCanvas(bgdata1);
+  // 添加背景音乐
+  var bgAudio = new Audio();
+  bgAudio.contains = true;
+  bgAudio.src = 'audio/audio1.mp3';
+  document.body.appendChild(bgAudio);
+  //音乐开始播放
+  bgAudio.play();
+  // document.getElementById("audioMusic").play();
   // 点击下面tab操作
   $('#operaTab span').click(function() {
     var i = $(this).index();//下标第一种写法
