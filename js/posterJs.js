@@ -1,4 +1,6 @@
 (function(global){
+  alert("test");
+  $("#audio")[0].play();
   var progressbar={
     init:function(){
         var fill=document.getElementById('fill');
