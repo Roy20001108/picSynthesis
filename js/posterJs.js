@@ -475,7 +475,7 @@ progressbar.init();
             if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(!rega.test(chr[a])){
-                temp=temp.substring(0, temp.length()-1)
+                temp=temp.substring(0, temp.length-1)
                 row.push(temp);
                 temp = chr[a-1] + chr[a];
               }else{
@@ -497,6 +497,7 @@ progressbar.init();
       for(var b = 0; b < row.length; b++){
           context.fillText(row[b],x,y+(b+1)*40);//字体20，间隔24。类似行高
       }
+      alert(JSON.stringify(row));
       return row.length;
       // 只显示2行，加...
       /*for(var b = 0; b < 2; b++){
