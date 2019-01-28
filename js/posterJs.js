@@ -22,7 +22,7 @@ progressbar.init();
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "image/templateBig1.png";
+  var bgdata1 = "";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
@@ -60,13 +60,14 @@ progressbar.init();
     })
   
   creatCanvas(bgdata1);
+  // console.log(document.getElementById("audioMusic"));
   // 添加背景音乐
-  var bgAudio = new Audio();
-  bgAudio.contains = true;
-  bgAudio.src = 'audio/audio1.mp3';
-  document.body.appendChild(bgAudio);
+  // var bgAudio = new Audio();
+  // bgAudio.contains = true;
+  // bgAudio.src = 'audio/audio1.mp3';
+  // document.body.appendChild(bgAudio);
   //音乐开始播放
-  bgAudio.play();
+  // bgAudio.play();
   // document.getElementById("audioMusic").play();
   // 点击下面tab操作
   $('#operaTab span').click(function() {
