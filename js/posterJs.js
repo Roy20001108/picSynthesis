@@ -472,12 +472,24 @@ progressbar.init();
             
           }//context.measureText(text).width  测量文本text的宽度
           else{
-            var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
-            if(!reg.test(chr[a])){
-              temp += chr[a];
+            if(customFlag){
+              var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
+              if(!rega.test(chr[a])){
+                temp -= chr[a-1];
+                row.push(temp);
+                temp = chr[a-1] + chr[a];
+              }else{
+                row.push(temp);
+                temp = chr[a];
+              }
             }else{
-              row.push(temp);
-              temp = chr[a];
+              var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
+              if(!reg.test(chr[a])){
+                temp += chr[a];
+              }else{
+                row.push(temp);
+                temp = chr[a];
+              }
             }
           }
       }
