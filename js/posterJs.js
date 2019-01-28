@@ -376,7 +376,7 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom = $("#textAreaTwo").text();
-            blessValCustom = blessValCustom.replace(/\s/g,""); 
+            // blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
             rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
