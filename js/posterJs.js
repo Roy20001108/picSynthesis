@@ -269,7 +269,7 @@ progressbar.init();
     var stageplay=1;
         /*上传图片*/
     document.getElementById('inputimg').onchange = function() {
-      // document.getElementById('inputimg').style.zIndex = 1;
+      document.getElementById('inputimg').style.zIndex = 1;
       document.getElementById('upimg').style.visibility="hidden";
         var fileObj = document.getElementById('inputimg').files[0];
       if (document.getElementById('inputimg').files.length === 0) {
@@ -475,7 +475,7 @@ progressbar.init();
             if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(!rega.test(chr[a])){
-                temp -= chr[a-1];
+                temp=temp.substring(0, temp.length()-1)
                 row.push(temp);
                 temp = chr[a-1] + chr[a];
               }else{
@@ -525,7 +525,7 @@ progressbar.init();
   //  $(".toNameStyle").val("");
   //   $(".fromNameStyle").val("");
 
-    window.location.reload();
+    // window.location.reload();
     // $(".loading").fadeOut();
     // document.getElementById('makePhoster').style.display='block';   
   }
