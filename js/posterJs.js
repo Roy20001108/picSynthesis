@@ -454,7 +454,7 @@ progressbar.init();
   
       for(var a = 0; a < chr.length; a++){
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
-            if ((selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
+            if ((selectImgFlag == 0 && chr[a] == "路")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a] == "愿")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a] == "长")||(selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
               row.push(temp);
               temp = chr[a];
             }else{
@@ -464,7 +464,7 @@ progressbar.init();
           }//context.measureText(text).width  测量文本text的宽度
           else{
             var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
-            if(!reg.test(chr[a]) || chr[a] == "前"){
+            if(!reg.test(chr[a])){
               temp += chr[a];
             }else{
               row.push(temp);
