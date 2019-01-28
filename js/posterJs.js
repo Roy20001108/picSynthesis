@@ -337,7 +337,7 @@ progressbar.init();
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
         if (selectImgFlag == 0){
-          if(inputimg!=''){
+          // if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
             var fromNameVal = $("input[name='fromNameOne']").val();
             var rownum;
@@ -349,17 +349,20 @@ progressbar.init();
               } else {
                 customWidth = parseFloat(customWidth);
               }
-              var blessValCustom =$("#textAreaOne").text();
-              blessValCustom = blessValCustom.replace(/\s/g,""); 
+              var blessValCustom =document.getElementById("textAreaOne").innerText;
+              blessValCustom = blessValCustom.replace("\r\n","<br/>");
+              blessValCustom = blessValCustom.replace(" ","&nbsp;");
+              // var blessValCustom =$("#textAreaOne").text();
+              // blessValCustom = blessValCustom.replace(/\s/g,""); 
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
             } else {
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
-          }else{
-            alert("请上传图片");
-            return;
-          }
+          // }else{
+          //   alert("请上传图片");
+          //   return;
+          // }
         } else if (selectImgFlag == 1) {
           var toNameVal = $("input[name='toNameTwo']").val();
           var fromNameVal = $("input[name='fromNameTwo']").val();
@@ -412,11 +415,11 @@ progressbar.init();
             }
             var blessValCustom = $("#textAreaFour").text();
             blessValCustom = blessValCustom.replace(/\s/g,""); 
-            rownum = drawText(context,blessValCustom,85,510,customWidth,'#660066');
+            rownum = drawText(context,blessValCustom,85,510,customWidth,'#521f3b');
           } else {
-            rownum = drawText(context,blessValStr,85,510,460,'#660066');
+            rownum = drawText(context,blessValStr,85,510,460,'#521f3b');
           }
-          drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#660066');
+          drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
@@ -571,7 +574,7 @@ progressbar.init();
       sel.removeAllRanges();
       sel.addRange(range);
       }
-    var plateform = Zepto.device.os;
+    // var plateform = Zepto.device.os;
     // if(plateform == "android"){
     //   alert("android");
     //  $("selector").find("input[type='file']").attr("capture","camera");
