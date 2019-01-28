@@ -1,5 +1,5 @@
 (function(global){
-  alert("test");
+  alert("testMp3");
   $("#audio")[0].play();
   var progressbar={
     init:function(){
