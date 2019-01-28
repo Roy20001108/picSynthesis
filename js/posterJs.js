@@ -350,8 +350,8 @@ progressbar.init();
                 customWidth = parseFloat(customWidth);
               }
               var blessValCustom =document.getElementById("textAreaOne").innerText;
-              blessValCustom = blessValCustom.replace("\r\n","<br/>");
-              blessValCustom = blessValCustom.replace(" ","&nbsp;");
+              // blessValCustom = blessValCustom.replace("\r\n","<br/>");
+              // blessValCustom = blessValCustom.replace(" ","&nbsp;");
               // var blessValCustom =$("#textAreaOne").text();
               // blessValCustom = blessValCustom.replace(/\s/g,""); 
               rownum = drawText(context,blessValCustom,35,420,customWidth,'#724079');
@@ -376,7 +376,7 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom = $("#textAreaTwo").text();
-            // blessValCustom = blessValCustom.replace(/\s/g,""); 
+            blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
             rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
