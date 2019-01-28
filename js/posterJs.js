@@ -375,8 +375,9 @@ progressbar.init();
             } else {
               customWidth = parseFloat(customWidth);
             }
-            var blessValCustom = $("#textAreaTwo").text();
-            blessValCustom = blessValCustom.replace(/\s/g,""); 
+            var blessValCustom =document.getElementById("textAreaTwo").innerText;
+            // var blessValCustom = $("#textAreaTwo").text();
+            // blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,88,187,customWidth,'#ffcc66');
           } else {
             rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
@@ -394,8 +395,9 @@ progressbar.init();
             } else {
               customWidth = parseFloat(customWidth);
             }
-            var blessValCustom = $("#textAreaThree").text();
-            blessValCustom = blessValCustom.replace(/\s/g,""); 
+            var blessValCustom =document.getElementById("textAreaThree").innerText;
+            // var blessValCustom = $("#textAreaThree").text();
+            // blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,125,355,customWidth,'#ffffff');
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
@@ -413,8 +415,9 @@ progressbar.init();
             } else {
               customWidth = parseFloat(customWidth);
             }
-            var blessValCustom = $("#textAreaFour").text();
-            blessValCustom = blessValCustom.replace(/\s/g,""); 
+            var blessValCustom =document.getElementById("textAreaFour").innerText;
+            // var blessValCustom = $("#textAreaFour").text();
+            // blessValCustom = blessValCustom.replace(/\s/g,""); 
             rownum = drawText(context,blessValCustom,85,510,customWidth,'#521f3b');
           } else {
             rownum = drawText(context,blessValStr,85,510,460,'#521f3b');
@@ -501,7 +504,7 @@ progressbar.init();
   //  $(".toNameStyle").val("");
   //   $(".fromNameStyle").val("");
 
-    window.location.reload();
+    // window.location.reload();
     // $(".loading").fadeOut();
     // document.getElementById('makePhoster').style.display='block';   
   }
