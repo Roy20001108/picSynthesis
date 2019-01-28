@@ -571,6 +571,14 @@ progressbar.init();
       sel.removeAllRanges();
       sel.addRange(range);
       }
+    var plateform = Zepto.device.os;
+    // if(plateform == "android"){
+    //   alert("android");
+    //  $("selector").find("input[type='file']").attr("capture","camera");
+    // }else if(plateform=="ios"){
+    //   alert("ios");     
+    //   $("selector").find("input[type='file']").removeAttr("capture");
+    // }
     function isAndroid(){
       var u = navigator.userAgent;
       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
