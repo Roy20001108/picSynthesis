@@ -87,7 +87,7 @@ progressbar.init();
     var toName = '';
     var fromName = '';
     var customVal = '';
-    document.getElementById('inputimg').value ==''
+    document.getElementById('inputimg').value =='';
     var i = $(this).index();//下标第一种写法
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectImg').siblings().removeClass('selectImg');
@@ -415,6 +415,7 @@ progressbar.init();
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
+      alert(inputimg);
         if (selectImgFlag == 0){
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
