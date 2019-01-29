@@ -137,13 +137,6 @@ ul,li{
   text-align: center;
   padding:50px 0; */
 }
-.add{
-  font-size:60px;
-  font-weight: 900;
-  color: #7B60AA;
-  opacity: 0.5;
-  margin: 0;
-}
 .headPic{
   font-size:28px;
   color: #7B60AA;
@@ -265,7 +258,7 @@ ul,li{
 }
 .blessTemplate {
   display:none;
-  font-weight: bold;
+  font-weight: 600;
 }
 .inputStyle {
   background-color: transparent;
