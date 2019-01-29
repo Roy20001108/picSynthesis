@@ -87,8 +87,8 @@ progressbar.init();
     var toName = '';
     var fromName = '';
     var customVal = '';
-    document.getElementById('inputimg').value =='';
-    alert(document.getElementById('inputimg').value);
+    document.getElementById('inputimg').files.length == 0;
+    alert("文件" + document.getElementById('inputimg').value);
     var i = $(this).index();//下标第一种写法
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectImg').siblings().removeClass('selectImg');
