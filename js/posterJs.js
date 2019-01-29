@@ -13,7 +13,7 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },30);
+        },200);
     }
 };
 progressbar.init();
