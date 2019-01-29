@@ -15,7 +15,7 @@
               document.getElementById('makePhoster').style.display='block';
               // document.getElementById('createPhoster').style.display='block';
             };
-        },300);
+        },1);
     }
 };
 progressbar.init();
@@ -27,6 +27,7 @@ progressbar.init();
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
   var imgArry = $("img");
+  var fontFlag;
   // var imgArry = ["image/templateLg_1.png", "image/templateLg_2.png", "image/templateLg_3.png", "image/templateLg_4.png","image/big_box.png", "image/templateMini_1.png", "image/templateMini_2.png","image/templateMini_3.png","image/templateMini_4.png"];
   var selectImgFlag = 0;
   var rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i;
@@ -75,42 +76,110 @@ progressbar.init();
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectTab').siblings().removeClass('selectTab');
     $('#templateCon li').eq(i).show().siblings().hide();
-    $('.scrollDiv span').removeClass('selectFont');
-    document.getElementById("blessOneDiv").style.visibility="hidden";
-    document.getElementById("blessTwoDiv").style.visibility="hidden";
-    document.getElementById("blessThreeDiv").style.visibility="hidden";
-    document.getElementById("blessFourDiv").style.visibility="hidden";
+    // $('.scrollDiv span').removeClass('selectFont');
+    // document.getElementById("blessOneDiv").style.visibility="hidden";
+    // document.getElementById("blessTwoDiv").style.visibility="hidden";
+    // document.getElementById("blessThreeDiv").style.visibility="hidden";
+    // document.getElementById("blessFourDiv").style.visibility="hidden";
   });
   // 点击模板图片操作
   $('#templateCon img').click(function() {
+    var toName = '';
+    var fromName = '';
+    var customVal = '';
     var i = $(this).index();//下标第一种写法
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectImg').siblings().removeClass('selectImg');
+    if(selectImgFlag == 0){
+      toName=$("input[name='toNameOne']").val();
+      fromName=$("input[name='fromNameOne']").val();
+      customVal=document.getElementById("textAreaOne").innerText;
+    } else if(selectImgFlag == 1) {
+      toName=$("input[name='toNameTwo']").val();
+      fromName=$("input[name='fromNameTwo']").val();
+      customVal=document.getElementById("textAreaTwo").innerText;
+    } else if (selectImgFlag == 2) {
+      toName=$("input[name='toNameThree']").val();
+      fromName=$("input[name='fromNameThree']").val();
+      customVal=document.getElementById("textAreaThree").innerText;
+    } else {
+      toName=$("input[name='toNameFour']").val();
+      fromName=$("input[name='fromNameFour']").val();
+      customVal=document.getElementById("textAreaFour").innerText;
+    }
     // $('#ImgCon li').eq(i).show().siblings().hide();
     if (i == 0) {
+      if($(".blessTemplate").html()||customFlag){
+        document.getElementById("blessOneDiv").style.visibility="visible";
+      }else{
+        document.getElementById("blessOneDiv").style.visibility="hidden";
+      }
+      document.getElementById("blessTwoDiv").style.visibility="hidden";
+      document.getElementById("blessThreeDiv").style.visibility="hidden";
+      document.getElementById("blessFourDiv").style.visibility="hidden";
       document.getElementById('inputimg').style.zIndex = 100;
       document.getElementById('gesture-area').style.zIndex = 99;
       document.getElementById('upimg').style.visibility="visible";
+      $("input[name='toNameOne']").val(toName);
+      $("input[name='fromNameOne']").val(fromName);
+      $("#textAreaOne").html(customVal+'<img src="image/zoomBtn.png" class="moveBtn" style="position: absolute;bottom:-10px;right:-10px;width:30px;height:30px;"/>');
       selectImgFlag = 0;
       bgdata = bgdata1;
+      areaMove();
     } else if (i == 1) {
+      document.getElementById("blessOneDiv").style.visibility="hidden";
+      if($(".blessTemplate").html()||customFlag){
+        document.getElementById("blessTwoDiv").style.visibility="visible";
+      }else{
+        document.getElementById("blessTwoDiv").style.visibility="hidden";
+      }
+      document.getElementById("blessThreeDiv").style.visibility="hidden";
+      document.getElementById("blessFourDiv").style.visibility="hidden";
       document.getElementById('inputimg').style.zIndex = -1;
       document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
+      $("input[name='toNameTwo']").val(toName);
+      $("input[name='fromNameTwo']").val(fromName);
+      $("#textAreaTwo").html(customVal+'<img src="image/zoomBtn.png" class="moveBtn" style="position: absolute;bottom:-10px;right:-10px;width:30px;height:30px;"/>');
       selectImgFlag = 1;
       bgdata = bgdata2;
+      areaMove();
     } else if (i == 2) {
+      document.getElementById("blessOneDiv").style.visibility="hidden";
+      document.getElementById("blessTwoDiv").style.visibility="hidden";
+      if($(".blessTemplate").html()||customFlag){
+        document.getElementById("blessThreeDiv").style.visibility="visible";
+      }else{
+        document.getElementById("blessThreeDiv").style.visibility="hidden";
+      }
+      document.getElementById("blessFourDiv").style.visibility="hidden";
       document.getElementById('inputimg').style.zIndex = -1;
       document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
+      $("input[name='toNameThree']").val(toName);
+      $("input[name='fromNameThree']").val(fromName);
+      $("#textAreaThree").html(customVal+'<img src="image/zoomBtn.png" class="moveBtn" style="position: absolute;bottom:-10px;right:-10px;width:30px;height:30px;"/>');
       selectImgFlag = 2;
       bgdata = bgdata3;
+      areaMove();
     } else {
+      document.getElementById("blessOneDiv").style.visibility="hidden";
+      document.getElementById("blessTwoDiv").style.visibility="hidden";
+      document.getElementById("blessThreeDiv").style.visibility="hidden";
+      if($(".blessTemplate").html()||customFlag){
+        document.getElementById("blessFourDiv").style.visibility="visible";
+      }else{
+        document.getElementById("blessFourDiv").style.visibility="hidden";
+      }
       document.getElementById('inputimg').style.zIndex = -1;
       document.getElementById('gesture-area').style.zIndex = -1;
       document.getElementById('upimg').style.visibility="hidden";
+      $("#textAreaFour").html(customVal+'<img src="image/zoomBtn.png" class="moveBtn" style="position: absolute;bottom:-10px;right:-10px;width:30px;height:30px;"/>');
+      $("input[name='toNameFour']").val(toName);
+      $("input[name='fromNameFour']").val(fromName);
       selectImgFlag = 3;
       bgdata = bgdata4;
+      areaMove();
     }
     creatCanvas(bgdata);
   });
