@@ -15,7 +15,7 @@
               document.getElementById('makePhoster').style.display='block';
               // document.getElementById('createPhoster').style.display='block';
             };
-        },10);
+        },300);
     }
 };
 progressbar.init();
@@ -440,13 +440,13 @@ progressbar.init();
         console.log('imgDatadahe：'+imgDatadahe);
     }
     function drawToName(context,t,x,y,c){
-      context.font='600 27px KaitiMobile';
+      context.font='500 27px KaitiMobile';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText(t,x,y);
     }
     function drawFromName(context,t,x,y,c){
-      context.font='600 27px KaitiMobile';
+      context.font='500 27px KaitiMobile';
       context.textAlign='right';
       context.fillStyle=c;
       context.fillText(t,x,y);
@@ -456,7 +456,7 @@ progressbar.init();
       var chr = t.split("");
       var temp = "";              
       var row = [];
-      context.font='600 27px KaitiMobile';
+      context.font='500 27px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle=c;
