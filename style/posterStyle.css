@@ -1,7 +1,7 @@
-/* @font-face {
+@font-face {
   font-family:'KaitiMobile';
   src: url("../font/GBKaiTi.ttf") format('truetype');
-} */
+}
 html,body{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -31,7 +31,6 @@ ul,li{
 .templateDiv {
   position: relative;
   height: 75%;
-  /* background-color: #F1F1F1; */
   padding: 0 8%;
   border-bottom: 1px solid #B1AFAF;
 }
@@ -98,10 +97,6 @@ ul,li{
 #ImgCon {
   height: 100%;
   position: relative;
-  /* width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; */
 }
 #ImgCon li{
   display: none;
@@ -127,15 +122,6 @@ ul,li{
   left:59.5%; 
   margin: 0;
   z-index: -1;
-  /* position: absolute;
-  top: 29%;
-  left: 58%;
-  margin: 0;
-  z-index: -1;
-  width: 180px;
-  height: 200px;
-  text-align: center;
-  padding:50px 0; */
 }
 .headPic{
   font-size:28px;
@@ -403,20 +389,3 @@ ul,li{
   font-size: 28px;
   color: #7b61aa;
 }
-/*实现元素宽度的过渡动画效果*/
-/* @keyframes move {
-  0%{
-      width:0;
-  }
-  100%{
-      width:100%;
-  }
-}
-@-webkit-keyframes move {
-  0%{
-      width:0;
-  }
-  100%{
-      width:100%;
-  }
-} */
