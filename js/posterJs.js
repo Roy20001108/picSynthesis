@@ -341,7 +341,7 @@ progressbar.init();
       var getCanvas = document.getElementById('posterCanvas');	
       var context=getCanvas.getContext('2d');
       var blessVal = $(".blessTemplate").html();
-      var blessValStr = "        " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
+      var blessValStr = "    " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       // return false;
       // var inputwd = document.getElementById('inputwd').value;
       var inputimg = document.getElementById('inputimg').value;
