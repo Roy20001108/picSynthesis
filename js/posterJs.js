@@ -88,6 +88,7 @@ progressbar.init();
     var fromName = '';
     var customVal = '';
     document.getElementById('inputimg').value =='';
+    alert(document.getElementById('inputimg').value);
     var i = $(this).index();//下标第一种写法
     //var i = $('tit').index(this);//下标第二种写法
     $(this).addClass('selectImg').siblings().removeClass('selectImg');
