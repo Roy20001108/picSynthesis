@@ -332,8 +332,8 @@ progressbar.init();
       imgthis.scaleX = elePos.s, imgthis.scaleY = elePos.s, imgthis.rotation = elePos.a, imgthis.x = elePos.x, imgthis.y = elePos.y;
       elePos.x = x;
       elePos.y = y;
-      console.log('*************'+elePos.x)
-      console.log('*************'+elePos.y)
+      // console.log('*************'+elePos.x)
+      // console.log('*************'+elePos.y)
       stage.update();
     }
     // 生成图片
