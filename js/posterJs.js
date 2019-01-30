@@ -34,7 +34,6 @@ progressbar.init();
     var oImg = new Image();//new一个新对象
         oImg.src = imgArry[i].src;//预加载，先指定一个img.src，当onload成功以后可以将数据指定到某一个元素或者图片上，或者返回一个结果
     })
-  
   creatCanvas(bgdata1);
   $('#operaTab span').click(function() {
     var i = $(this).index();//下标第一种写法
