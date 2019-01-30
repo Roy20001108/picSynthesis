@@ -1,5 +1,5 @@
 (function(global){
-  alert("test1");
+  alert("test2");
   var progressbar={
     init:function(){
         var fill=document.getElementById('fill');
@@ -271,9 +271,15 @@ progressbar.init();
       w:100,
       h:100
     }
+    alert(orient);
     var scale = 1,
       angle = 0,
       gestureArea = document.getElementById('gesture-area'); //手势区域
+      if(orient == 6){
+        angle = 90;
+      } else {
+        angle = 0;
+      }
     var stageplay=1;
         /*上传图片*/
     document.getElementById('inputimg').onchange = function() {
@@ -301,11 +307,11 @@ progressbar.init();
         if (typeof imgthis == 'undefined') {
           return;
         }
-        if (orient == 6) {
-          angle += (event.da+90);
-        }else{
+        // if (orient == 6) {
+        //   angle += (event.da+90);
+        // }else{
           angle += event.da;
-        }
+        // }
         scale = scale * (1 + event.ds);
         
         x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
