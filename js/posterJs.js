@@ -1,5 +1,4 @@
 (function(global){
-  alert("test2");
   var progressbar={
     init:function(){
         var fill=document.getElementById('fill');
@@ -21,7 +20,7 @@ progressbar.init();
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "";
+  var bgdata1 = "image/templateBig1.png";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
@@ -271,7 +270,6 @@ progressbar.init();
       w:100,
       h:100
     }
-    alert(orient);
     var scale = 1,
       angle = 0,
       gestureArea = document.getElementById('gesture-area'); //手势区域
@@ -293,11 +291,15 @@ progressbar.init();
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
       });
+      if(orient == 6) {
+        angle = 90;
+      } else {
+        angle = 0;
+      }
       imgGesturable();
     };
      /*调整图片位置*/
      function imgGesturable (){
-       alert(11111);
       interact(gestureArea).gesturable({
         onstart: function(event) {
         },
@@ -305,11 +307,7 @@ progressbar.init();
           if (typeof imgthis == 'undefined') {
             return;
           }
-          // if (orient == 6) {
-          //   angle += (event.da+90);
-          // }else{
-            angle += event.da;
-          // }
+          angle += event.da;
           scale = scale * (1 + event.ds);
           
           x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
