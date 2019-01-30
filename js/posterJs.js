@@ -240,7 +240,6 @@ progressbar.init();
         console.log('imgWidth:'+imgWidth+';elePos.w:'+elePos.w+';scale:'+sizescale);
         /*图片初始位置*/
         /*注：上传图片，放大缩小倍数需要除以2；设计稿中头像左上角，距内容区左上角距离，依然也需要除以2（横坐标除以2，纵坐标除以2）*/
-        alert("角度" + orient)
         if (orient == 6) {
           var fx=1100/2;
           var fy=300/2;
@@ -248,6 +247,7 @@ progressbar.init();
           elePos.x=fx;
           elePos.y=fy;
           elePos.a=90;
+          angle = 90;
         } else {
           var fx=760/2;
           var fy=362/2;
@@ -255,6 +255,7 @@ progressbar.init();
           elePos.x=fx;
           elePos.y=fy;
           elePos.a=0;
+          angle = 0;
         }
         imgthis.scaleX =sizescale, imgthis.scaleY = sizescale, imgthis.rotation = elePos.a, imgthis.x = fx, imgthis.y = fy;
         stage.addChild(imgthis);
@@ -292,17 +293,8 @@ progressbar.init();
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
       });
-      alert("===" + orient);
-      if(orient == 6) {
-        alert(11111);
-        angle = 90;
-      } else {
-        angle = 0;
-      }
-      imgGesturable();
     };
      /*调整图片位置*/
-     function imgGesturable (){
       interact(gestureArea).gesturable({
         onstart: function(event) {
         },
@@ -325,7 +317,6 @@ progressbar.init();
       }).draggable({
         onmove: dragMoveListener
       });
-     }
     function dragMoveListener(event) {
       if (typeof imgthis == 'undefined') {
         return
