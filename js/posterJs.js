@@ -13,14 +13,14 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },200);
+        },1);
     }
 };
 progressbar.init();
   var bgdata;
   var orient;
   var customFlag;
-  var bgdata1 = "image/templateBig1.png";
+  var bgdata1 = "";
   var bgdata2 = "image/templateBig2.png";
   var bgdata3 = "image/templateBig3.png";
   var bgdata4 = "image/templateBig4.png";
@@ -422,13 +422,13 @@ progressbar.init();
         console.log('imgDatadahe：'+imgDatadahe);
     }
     function drawToName(context,t,x,y,c){
-      context.font='500 27px KaitiMobile';
+      context.font='500 28px KaitiMobile';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText(t,x,y);
     }
     function drawFromName(context,t,x,y,c){
-      context.font='500 27px KaitiMobile';
+      context.font='500 28px KaitiMobile';
       context.textAlign='right';
       context.fillStyle=c;
       context.fillText(t,x,y);
@@ -437,7 +437,7 @@ progressbar.init();
       var chr = t.split("");
       var temp = "";              
       var row = [];
-      context.font='500 27px KaitiMobile';
+      context.font='500 28px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle=c;
@@ -489,7 +489,7 @@ progressbar.init();
   document.getElementById("saveBtn").onclick = function(){
     document.getElementById('makePhoster').style.display='block';
     document.getElementById('createPhoster').style.display='none';
-    window.location.reload();
+    // window.location.reload();
   }
     function isAndroid(){
       var u = navigator.userAgent;
