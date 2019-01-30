@@ -1,4 +1,5 @@
 (function(global){
+  alert("test");
   var progressbar={
     init:function(){
         var fill=document.getElementById('fill');
@@ -300,11 +301,11 @@ progressbar.init();
         if (typeof imgthis == 'undefined') {
           return;
         }
-        if (orient == 6) {
-          angle=90;
-        }else{
-          angle=0;
-        }
+        // if (orient == 6) {
+        //   angle=90;
+        // }else{
+        //   angle=0;
+        // }
         scale = scale * (1 + event.ds);
         angle += event.da;
         x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
