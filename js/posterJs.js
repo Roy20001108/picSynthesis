@@ -291,6 +291,7 @@ progressbar.init();
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
       });
+      alert(orient);
       if(orient == 6) {
         alert(11111);
         angle = 90;
@@ -301,7 +302,6 @@ progressbar.init();
     };
      /*调整图片位置*/
      function imgGesturable (){
-       alert(angle);
       interact(gestureArea).gesturable({
         onstart: function(event) {
         },
