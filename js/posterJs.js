@@ -240,6 +240,7 @@ progressbar.init();
         console.log('imgWidth:'+imgWidth+';elePos.w:'+elePos.w+';scale:'+sizescale);
         /*图片初始位置*/
         /*注：上传图片，放大缩小倍数需要除以2；设计稿中头像左上角，距内容区左上角距离，依然也需要除以2（横坐标除以2，纵坐标除以2）*/
+        alert("角度" + orient)
         if (orient == 6) {
           var fx=1100/2;
           var fy=300/2;
@@ -291,7 +292,7 @@ progressbar.init();
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
       });
-      alert(orient);
+      alert("===" + orient);
       if(orient == 6) {
         alert(11111);
         angle = 90;
