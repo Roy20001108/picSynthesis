@@ -275,11 +275,6 @@ progressbar.init();
     var scale = 1,
       angle = 0,
       gestureArea = document.getElementById('gesture-area'); //手势区域
-      if(orient == 6){
-        angle = 90;
-      } else {
-        angle = 0;
-      }
     var stageplay=1;
         /*上传图片*/
     document.getElementById('inputimg').onchange = function() {
@@ -298,34 +293,38 @@ progressbar.init();
       EXIF.getData(oFile, function () {
         orient = EXIF.getTag(this, 'Orientation');
       });
+      imgGesturable();
     };
      /*调整图片位置*/
-    interact(gestureArea).gesturable({
-      onstart: function(event) {
-      },
-      onmove: function(event) {
-        if (typeof imgthis == 'undefined') {
-          return;
-        }
-        // if (orient == 6) {
-        //   angle += (event.da+90);
-        // }else{
-          angle += event.da;
-        // }
-        scale = scale * (1 + event.ds);
-        
-        x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
-        elePos.x = x;
-        elePos.y = y;
-        elePos.s = scale;
-        elePos.a = angle;
-        imgthis.scaleX = elePos.s, imgthis.scaleY = elePos.s, imgthis.rotation = elePos.a, imgthis.x = elePos.x, imgthis.y = elePos.y;
-        stage.update();
-      },
-      onend: function(event) {}
-    }).draggable({
-      onmove: dragMoveListener
-    });
+     function imgGesturable (){
+       alert(11111);
+      interact(gestureArea).gesturable({
+        onstart: function(event) {
+        },
+        onmove: function(event) {
+          if (typeof imgthis == 'undefined') {
+            return;
+          }
+          // if (orient == 6) {
+          //   angle += (event.da+90);
+          // }else{
+            angle += event.da;
+          // }
+          scale = scale * (1 + event.ds);
+          
+          x = (parseFloat(elePos.x) || 0) + event.dx, y = (parseFloat(elePos.y) || 0) + event.dy;
+          elePos.x = x;
+          elePos.y = y;
+          elePos.s = scale;
+          elePos.a = angle;
+          imgthis.scaleX = elePos.s, imgthis.scaleY = elePos.s, imgthis.rotation = elePos.a, imgthis.x = elePos.x, imgthis.y = elePos.y;
+          stage.update();
+        },
+        onend: function(event) {}
+      }).draggable({
+        onmove: dragMoveListener
+      });
+     }
     function dragMoveListener(event) {
       if (typeof imgthis == 'undefined') {
         return
