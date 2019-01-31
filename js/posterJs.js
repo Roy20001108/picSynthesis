@@ -10,8 +10,8 @@
             $("#percentVal").html("心意值正在加载" + count+"%");
             if(count===100) {
               clearInterval(timer);
-              // $(".loading").fadeOut();
-              // document.getElementById('makePhoster').style.display='block';
+              $(".loading").fadeOut();
+              document.getElementById('makePhoster').style.display='block';
             };
         },30);
     }
