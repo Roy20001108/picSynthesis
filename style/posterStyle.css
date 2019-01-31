@@ -349,13 +349,12 @@ ul,li{
   margin-top:8%;
 }
 .animation{
-  margin-top:25%;
+  margin-top:20%;
 }
 .slogan{
   font-family: "KaitiMobile";
   font-size: 63px;
   color: #c01b20;
-  margin-top: 10%;
 }
 .imgwrapper{
   background-color: #F1F1F1;
@@ -382,7 +381,7 @@ ul,li{
   top:60%;
   left:50%;
   margin-left:-283px;
-  margin-top: 20%;
+  margin-top: 25%;
   width:566px;
   height:20px;
   background-color: darkgray;
