@@ -30,12 +30,12 @@ ul,li{
 }
 .templateDiv {
   position: relative;
-  height: 957px;
+  height: 950px;
   padding: 0 8%;
   border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv {
-  height: 15%;
+  height: 14%;
   border-bottom: 1px solid #B1AFAF;
 }
 .selectDiv img {
@@ -47,7 +47,7 @@ ul,li{
   border-bottom: 6px solid transparent;
 }
 .tabDiv {
-  height: 8%;
+  height: 6%;
   font-size: 28px;
   color: #B0A0CC;
 }
