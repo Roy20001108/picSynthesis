@@ -47,7 +47,7 @@ ul,li{
   border-bottom: 6px solid transparent;
 }
 .tabDiv {
-  height: 7%;
+  height: 7.2%;
   font-size: 28px;
   color: #B0A0CC;
 }
@@ -194,7 +194,7 @@ ul,li{
   margin: 0 2%;
   border: none;
   display: inline-block;
-  height: 58%;
+  /* height: 58%; */
   /* padding:  */
 }
 .selectFont{
