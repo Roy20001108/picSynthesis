@@ -30,7 +30,7 @@ ul,li{
 }
 .templateDiv {
   position: relative;
-  height: 75%;
+  height: 970px;
   padding: 0 8%;
   border-bottom: 1px solid #B1AFAF;
 }
@@ -116,7 +116,7 @@ ul,li{
   overflow:hidden; 
   z-index:99; 
 }
-.upimg { 
+.upimg {
   position:absolute; 
   top:31%; 
   left:63%; 
