@@ -119,9 +119,20 @@ ul,li{
 .upimg { 
   position:absolute; 
   top:31%; 
-  left:59.5%; 
+  left:63%; 
   margin: 0;
-  z-index: -1;
+  /* z-index: -1; */
+  text-align: center;
+  color: #7B60AA;
+  font-weight:600;
+}
+.tips1{
+  margin:2px;
+  font-size:40px;
+}
+.tips2{
+  margin:2px;
+  font-size:16px;
 }
 .headPic{
   font-size:28px;
@@ -342,7 +353,7 @@ ul,li{
 }
 .slogan{
   font-family: "KaitiMobile";
-  font-size: 40px;
+  font-size: 63px;
   color: #c01b20;
   margin-top: 10%;
 }
@@ -371,7 +382,7 @@ ul,li{
   top:60%;
   left:50%;
   margin-left:-283px;
-  margin-top: 30%;
+  margin-top: 20%;
   width:566px;
   height:20px;
   background-color: darkgray;
@@ -382,10 +393,15 @@ ul,li{
   height:20px;
   /* animation: move 5s infinite linear; */
   text-align: center;
-  background-color: #7B60AA;
+  background-color: #c01b20;
   border-radius: 10px;
 }
 #percentVal{
   font-size: 28px;
-  color: #7b61aa;
+  color: #666666;
+}
+.footerFont{
+  margin-top: 25%;
+  font-size: 28px;
+  color: #666666;
 }
