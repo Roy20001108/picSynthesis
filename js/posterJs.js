@@ -449,7 +449,7 @@ progressbar.init();
             temp += chr[a];
           }//context.measureText(text).width  测量文本text的宽度
           else{
-            if(customFlag){
+            // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(!rega.test(chr[a])){
                 temp=temp.substring(0, temp.length-1)
@@ -459,15 +459,15 @@ progressbar.init();
                 row.push(temp);
                 temp = chr[a];
               }
-            }else{
-              var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
-              if(!reg.test(chr[a])){
-                temp += chr[a];
-              }else{
-                row.push(temp);
-                temp = chr[a];
-              }
-            }
+            // }else{
+              // var reg = new RegExp("[\\u4E00-\\u9FFF]+$","g");
+              // if(!reg.test(chr[a])){
+              //   temp += chr[a];
+              // }else{
+              //   row.push(temp);
+              //   temp = chr[a];
+              // }
+            // }
           }
       }
       row.push(temp);

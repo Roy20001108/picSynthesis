@@ -217,7 +217,7 @@ ul,li{
   visibility: hidden;
 }
 #blessOneDiv .blessTemplate{
-  margin: 30px 0;
+  margin: 25px 0;
 }
 #blessTwoDiv {
   font-family: "KaitiMobile";
@@ -261,6 +261,7 @@ ul,li{
 .blessTemplate {
   display:none;
   font-weight: 500;
+  line-height: 40px;
 }
 .inputStyle {
   background-color: transparent;
