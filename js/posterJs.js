@@ -13,7 +13,7 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },30);
+        },1);
     }
 };
 progressbar.init();
@@ -408,7 +408,7 @@ progressbar.init();
             var blessValCustom =document.getElementById("textAreaFour").innerText;
             rownum = drawText(context,blessValCustom,85,510,customWidth,'#521f3b');
           } else {
-            rownum = drawText(context,blessValStr,85,510,470,'#521f3b');
+            rownum = drawText(context,blessValStr,85,510,465,'#521f3b');
           }
           drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
         }
