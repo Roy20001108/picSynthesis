@@ -212,7 +212,7 @@ ul,li{
   position: absolute;
   top: 37%;
   left: 12.7%;
-  width: 335px;
+  width: 330px;
   color: #724079;
   visibility: hidden;
 }
@@ -265,8 +265,8 @@ ul,li{
 .inputStyle {
   background-color: transparent;
   font-size: 36px;
-  height: 30px;
-  line-height: 30px;
+  /* height: 30px;
+  line-height: 30px; */
   outline: none;
   font-family: "KaitiMobile";
   border: 1px solid #bfbfbf;
@@ -329,11 +329,11 @@ ul,li{
   color: rgba(82,31,59,0.87);
 }
 .toNameStyle {
-  width: 195px;
+  width: 260px;
   text-align: left;
 }
 .fromNameStyle {
-  width: 170px;
+  width: 2200px;
   float: right;
   text-align: right;
 }
