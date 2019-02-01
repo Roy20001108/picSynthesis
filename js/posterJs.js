@@ -388,11 +388,11 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
-            rownum = drawText(context,blessValCustom,120,330,customWidth,'#ffffff');
+            rownum = drawText(context,blessValCustom,110,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,120,330,430,'#ffffff');
+            rownum = drawText(context,blessValStr,110,330,430,'#ffffff');
           }
-          drawFromName(context,fromNameVal,510,(330 + rownum * 50 + 50),'#ffffff');
+          drawFromName(context,fromNameVal,515,(330 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
