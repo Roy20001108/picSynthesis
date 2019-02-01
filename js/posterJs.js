@@ -452,6 +452,7 @@ progressbar.init();
             // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(selectImgFlag == 2 && chr[a+1] == "紫"){
+                alert(1111);
                 temp += chr[a];
                 row.push(temp);
               }else if(!rega.test(chr[a])){
