@@ -13,7 +13,7 @@
               $(".loading").fadeOut();
               document.getElementById('makePhoster').style.display='block';
             };
-        },1);
+        },60);
     }
 };
 progressbar.init();
@@ -388,11 +388,11 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
-            rownum = drawText(context,blessValCustom,125,330,customWidth,'#ffffff');
+            rownum = drawText(context,blessValCustom,120,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,125,330,430,'#ffffff');
+            rownum = drawText(context,blessValStr,120,330,430,'#ffffff');
           }
-          drawFromName(context,fromNameVal,507,(330 + rownum * 50 + 50),'#ffffff');
+          drawFromName(context,fromNameVal,510,(330 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
@@ -452,7 +452,6 @@ progressbar.init();
             // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(selectImgFlag == 2 && chr[a+1] == "紫"){
-                alert(1111);
                 temp += chr[a];
                 row.push(temp);
                 temp = "";
