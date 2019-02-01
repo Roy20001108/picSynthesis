@@ -327,7 +327,6 @@ progressbar.init();
       elePos.y = y;
       stage.update();
     }
-    alert("test");
     // 生成图片
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
@@ -380,7 +379,7 @@ progressbar.init();
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
           var rownum;
-          drawToName(context,toNameVal,125,310,'#ffffff');
+          drawToName(context,toNameVal,100,310,'#ffffff');
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[2].style.width;
             if (customWidth == '100%') {
@@ -389,9 +388,9 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
-            rownum = drawText(context,blessValCustom,110,330,customWidth,'#ffffff');
+            rownum = drawText(context,blessValCustom,100,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,110,330,440,'#ffffff');
+            rownum = drawText(context,blessValStr,100,330,440,'#ffffff');
           }
           drawFromName(context,fromNameVal,515,(330 + rownum * 50 + 50),'#ffffff');
         } else {
