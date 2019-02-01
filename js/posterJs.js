@@ -419,13 +419,13 @@ progressbar.init();
         console.log('imgDatadahe：'+imgDatadahe);
     }
     function drawToName(context,t,x,y,c){
-      context.font='500 28px KaitiMobile';
+      context.font='500 36px KaitiMobile';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText(t,x,y);
     }
     function drawFromName(context,t,x,y,c){
-      context.font='500 28px KaitiMobile';
+      context.font='500 36px KaitiMobile';
       context.textAlign='right';
       context.fillStyle=c;
       context.fillText(t,x,y);
@@ -434,18 +434,19 @@ progressbar.init();
       var chr = t.split("");
       var temp = "";              
       var row = [];
-      context.font='500 28px KaitiMobile';
+      context.font='500 36px KaitiMobile';
       context.textAlign='left';
       context.textBaseline='middle';
       context.fillStyle=c;
       for(var a = 0; a < chr.length; a++){
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
-            if ((selectImgFlag == 0 && chr[a] == "路")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a] == "愿")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "福" && chr[a] == "长")||(selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
-              row.push(temp);
-              temp = chr[a];
-            }else{
-              temp += chr[a];
-            }
+            // if ((selectImgFlag == 0 && chr[a] == "路")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a] == "愿")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "福" && chr[a] == "长")||(selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
+            //   row.push(temp);
+            //   temp = chr[a];
+            // }else{
+            //   temp += chr[a];
+            // }
+            temp += chr[a];
           }//context.measureText(text).width  测量文本text的宽度
           else{
             if(customFlag){
