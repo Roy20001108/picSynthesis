@@ -383,14 +383,14 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[2].style.width;
             if (customWidth == '100%') {
-              customWidth = '430';
+              customWidth = '440';
             } else {
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
             rownum = drawText(context,blessValCustom,110,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,110,330,430,'#ffffff');
+            rownum = drawText(context,blessValStr,110,330,440,'#ffffff');
           }
           drawFromName(context,fromNameVal,515,(330 + rownum * 50 + 50),'#ffffff');
         } else {
