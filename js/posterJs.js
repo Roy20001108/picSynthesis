@@ -379,7 +379,7 @@ progressbar.init();
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
           var rownum;
-          drawToName(context,toNameVal,125,330,'#ffffff');
+          drawToName(context,toNameVal,125,310,'#ffffff');
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[2].style.width;
             if (customWidth == '100%') {
@@ -388,11 +388,11 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
-            rownum = drawText(context,blessValCustom,125,355,customWidth,'#ffffff');
+            rownum = drawText(context,blessValCustom,125,335,customWidth,'#ffffff');
           } else {
             rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,510,(355 + rownum * 50 + 50),'#ffffff');
+          drawFromName(context,fromNameVal,510,(335 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
@@ -401,7 +401,7 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[3].style.width;
             if (customWidth == '100%') {
-              customWidth = '480';
+              customWidth = '490';
             } else {
               customWidth = parseFloat(customWidth);
             }
@@ -440,13 +440,13 @@ progressbar.init();
       context.fillStyle=c;
       for(var a = 0; a < chr.length; a++){
           if( context.measureText(temp).width < w && context.measureText(temp+(chr[a])).width <= w){
-            // if ((selectImgFlag == 0 && chr[a] == "路")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a] == "愿")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "福" && chr[a] == "长")||(selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
-            //   row.push(temp);
-            //   temp = chr[a];
-            // }else{
-            //   temp += chr[a];
-            // }
-            temp += chr[a];
+            if ((selectImgFlag == 0 && chr[a] == "家" && chr[a-1] == "筑")||((selectImgFlag == 1 || selectImgFlag == 2 || selectImgFlag == 3) && chr[a] == "路" && chr[a-1] == "一")||((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "福" && chr[a] == "长")||(selectImgFlag == 2 && chr[a-1] == "安" && chr[a] == "好") || ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "更" && chr[a] == "好")|| ((selectImgFlag == 1||selectImgFlag == 3) && chr[a-1] == "筑" && chr[a] == "家")) {
+              row.push(temp);
+              temp = chr[a];
+            }else{
+              temp += chr[a];
+            }
+            // temp += chr[a];
           }//context.measureText(text).width  测量文本text的宽度
           else{
             // if(customFlag){
