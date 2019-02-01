@@ -327,6 +327,7 @@ progressbar.init();
       elePos.y = y;
       stage.update();
     }
+    alert("test");
     // 生成图片
     document.getElementById('upload').onclick = function() {
       var getCanvas = document.getElementById('posterCanvas');	
