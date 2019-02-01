@@ -408,7 +408,7 @@ progressbar.init();
             var blessValCustom =document.getElementById("textAreaFour").innerText;
             rownum = drawText(context,blessValCustom,85,510,customWidth,'#521f3b');
           } else {
-            rownum = drawText(context,blessValStr,85,510,450,'#521f3b');
+            rownum = drawText(context,blessValStr,85,510,480,'#521f3b');
           }
           drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
         }
@@ -452,9 +452,9 @@ progressbar.init();
             // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(selectImgFlag == 2 && chr[a+1] == "紫"){
-                alert(temp);
+                temp += chr[a];
                 row.push(temp);
-                temp = chr[a];
+                temp = chr[a+1];
               }else if(!rega.test(chr[a])){
                 temp=temp.substring(0, temp.length-1)
                 row.push(temp);
