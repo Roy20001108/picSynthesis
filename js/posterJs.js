@@ -388,11 +388,11 @@ progressbar.init();
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
-            rownum = drawText(context,blessValCustom,125,335,customWidth,'#ffffff');
+            rownum = drawText(context,blessValCustom,125,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,125,355,390,'#ffffff');
+            rownum = drawText(context,blessValStr,125,330,390,'#ffffff');
           }
-          drawFromName(context,fromNameVal,510,(335 + rownum * 50 + 50),'#ffffff');
+          drawFromName(context,fromNameVal,507,(330 + rownum * 50 + 50),'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
@@ -408,7 +408,7 @@ progressbar.init();
             var blessValCustom =document.getElementById("textAreaFour").innerText;
             rownum = drawText(context,blessValCustom,85,510,customWidth,'#521f3b');
           } else {
-            rownum = drawText(context,blessValStr,85,510,460,'#521f3b');
+            rownum = drawText(context,blessValStr,85,510,450,'#521f3b');
           }
           drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
         }
@@ -451,7 +451,10 @@ progressbar.init();
           else{
             // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
-              if(!rega.test(chr[a])){
+              if(selectImgFlag == 2 && chr[a+1] == "紫"){
+                temp += chr[a];
+                row.push(temp);
+              }else if(!rega.test(chr[a])){
                 temp=temp.substring(0, temp.length-1)
                 row.push(temp);
                 temp = chr[a-1] + chr[a];
