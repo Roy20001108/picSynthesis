@@ -383,14 +383,14 @@ progressbar.init();
           if (customFlag) {
             var customWidth = document.getElementsByClassName("textArea")[2].style.width;
             if (customWidth == '100%') {
-              customWidth = '390';
+              customWidth = '430';
             } else {
               customWidth = parseFloat(customWidth);
             }
             var blessValCustom =document.getElementById("textAreaThree").innerText;
             rownum = drawText(context,blessValCustom,125,330,customWidth,'#ffffff');
           } else {
-            rownum = drawText(context,blessValStr,125,330,390,'#ffffff');
+            rownum = drawText(context,blessValStr,125,330,430,'#ffffff');
           }
           drawFromName(context,fromNameVal,507,(330 + rownum * 50 + 50),'#ffffff');
         } else {
@@ -452,6 +452,7 @@ progressbar.init();
             // if(customFlag){
               var rega = new RegExp("[\\u4E00-\\u9FFF]+$","g");
               if(selectImgFlag == 2 && chr[a+1] == "紫"){
+                alert(1111);
                 temp += chr[a];
                 row.push(temp);
                 temp = "";
