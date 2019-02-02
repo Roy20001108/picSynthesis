@@ -5,14 +5,14 @@
         var count=0;
     //通过间隔定时器实现百分比文字效果,通过计算CSS动画持续时间进行间隔设置
         var timer=setInterval(function(e){
-            count++;
-            fill.style.width = count + '%';
-            $("#percentVal").html("心意值正在加载" + count+"%");
-            if(count===100) {
-              clearInterval(timer);
-              $(".loading").fadeOut();
-              document.getElementById('makePhoster').style.display='block';
-            };
+          count++;
+          fill.style.width = count + '%';
+          $("#percentVal").html("心意值正在加载" + count+"%");
+          if(count===100) {
+            clearInterval(timer);
+            $(".loading").fadeOut();
+            document.getElementById('makePhoster').style.display='block';
+          };
         },60);
     }
 };
