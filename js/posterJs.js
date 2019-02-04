@@ -336,6 +336,7 @@ progressbar.init();
       var inputimg = document.getElementById('inputimg').value;
       var QRcodeImg = new Image();//创建图片对象，用于在canvas中渲染
       QRcodeImg.src='../image/QRcode.png';
+      alert(JSON.stringify(QRcodeImg));
         if (selectImgFlag == 0){
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
