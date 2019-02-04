@@ -355,7 +355,11 @@ progressbar.init();
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
-            context.drawImage(QRcodeImg,40,800);
+            context.font='14px';
+            context.textAlign='left';
+            context.fillStyle='#724079';
+            context.fillText('长按制作祝福卡',30,500);
+            context.drawImage(QRcodeImg,40,600);
           }else{
             alert("请上传图片");
             return;
