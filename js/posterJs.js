@@ -334,6 +334,8 @@ progressbar.init();
       var blessVal = $(".blessTemplate").html();
       var blessValStr = "    " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       var inputimg = document.getElementById('inputimg').value;
+      var QRcodeImg = new Image();//创建图片对象，用于在canvas中渲染
+      QRcodeImg.src='../image/QRcode.png';
         if (selectImgFlag == 0){
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
@@ -353,6 +355,7 @@ progressbar.init();
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
+            context.drawImage(QRcodeImg,40,800);
           }else{
             alert("请上传图片");
             return;
