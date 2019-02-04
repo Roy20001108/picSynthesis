@@ -446,13 +446,13 @@ progressbar.init();
       context.fillText(t,x,y);
     }
     function drawTextUp(context,x,y,c){
-      context.font='14px';
+      context.font='14px Arial';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText('长按制作专属祝福卡',x,y);
     }
     function drawTextDown(context,x,y,c){
-      context.font='13px';
+      context.font='13px Arial';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText('雀巢母婴营养e学界出品',x,y);
