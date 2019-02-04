@@ -355,6 +355,7 @@ progressbar.init();
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
+            alert(1111);
             context.font='14px';
             context.textAlign='left';
             context.fillStyle='#724079';
