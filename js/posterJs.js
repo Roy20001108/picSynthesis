@@ -334,9 +334,7 @@ progressbar.init();
       var blessVal = $(".blessTemplate").html();
       var blessValStr = "    " + blessVal.substr(blessVal.indexOf('</span>') + 7,blessVal.length);
       var inputimg = document.getElementById('inputimg').value;
-      var QRcodeImg = new Image();//创建图片对象，用于在canvas中渲染
-      QRcodeImg.src='../image/QRcode.png';
-      alert(JSON.stringify(QRcodeImg));
+      var QRcodeImg=document.getElementById("QRcode");
         if (selectImgFlag == 0){
           if(inputimg!=''){
             var toNameVal = $("input[name='toNameOne']").val();
@@ -356,7 +354,7 @@ progressbar.init();
               rownum = drawText(context,blessValStr,35,420,336,'#724079');
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
-            alert(1111);
+            alert(QRcodeImg);
             context.drawImage(QRcodeImg,40,550);
             drawTextUp(context,30,600,'#5f4a9c');
             drawTextDown(context,29,610,'#5f4a9c');
@@ -447,13 +445,13 @@ progressbar.init();
       context.fillText(t,x,y);
     }
     function drawTextUp(context,x,y,c){
-      context.font='14px Arial';
+      context.font='500 14px Arial';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText('长按制作专属祝福卡',x,y);
     }
     function drawTextDown(context,x,y,c){
-      context.font='13px Arial';
+      context.font='500 13px Arial';
       context.textAlign='left';
       context.fillStyle= c;
       context.fillText('雀巢母婴营养e学界出品',x,y);
