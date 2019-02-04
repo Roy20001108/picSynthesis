@@ -355,8 +355,8 @@ progressbar.init();
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
             context.drawImage(QRcodeImg,42,833,76,76);
-            drawTextUp(context,18,915,'#5f4a9c');
-            drawTextDown(context,15,930,'#5f4a9c');
+            drawTextUp(context,18,920,'#5f4a9c');
+            drawTextDown(context,15,940,'#5f4a9c');
           }else{
             alert("请上传图片");
             return;
@@ -379,9 +379,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
           }
           drawFromName(context,fromNameVal,550,(187 + rownum * 50 + 50),'#ffcc66');
-          context.drawImage(QRcodeImg,590,764,76,76);
-          drawTextUp(context,570,850,'#f4d776');
-          drawTextDown(context,565,870,'#f4d776');
+          context.drawImage(QRcodeImg,550,764,76,76);
+          drawTextUp(context,530,850,'#f4d776');
+          drawTextDown(context,525,870,'#f4d776');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -400,9 +400,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,100,330,440,'#ffffff');
           }
           drawFromName(context,fromNameVal,515,(330 + rownum * 50 + 50),'#ffffff');
-          context.drawImage(QRcodeImg,610,833,76,76);
-          drawTextUp(context,590,915,'#ffffff');
-          drawTextDown(context,585,930,'#ffffff');
+          context.drawImage(QRcodeImg,560,833,76,76);
+          drawTextUp(context,540,925,'#ffffff');
+          drawTextDown(context,535,950,'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
@@ -421,9 +421,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,85,510,465,'#521f3b');
           }
           drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
-          context.drawImage(QRcodeImg,610,810,76,76);
-          drawTextUp(context,570,900,'#ffffff');
-          drawTextDown(context,565,930,'#ffffff');
+          context.drawImage(QRcodeImg,550,810,76,76);
+          drawTextUp(context,530,900,'#ffffff');
+          drawTextDown(context,525,920,'#ffffff');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
