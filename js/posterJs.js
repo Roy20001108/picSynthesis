@@ -356,11 +356,9 @@ progressbar.init();
             }
             drawFromName(context,fromNameVal,330,(420 + rownum * 50 + 60),'#724079');
             alert(1111);
-            context.font='14px';
-            context.textAlign='left';
-            context.fillStyle='#724079';
-            context.fillText('长按制作祝福卡',30,500);
-            context.drawImage(QRcodeImg,40,600);
+            context.drawImage(QRcodeImg,40,550);
+            drawTextUp(context,30,600,'#5f4a9c');
+            drawTextDown(context,29,610,'#5f4a9c');
           }else{
             alert("请上传图片");
             return;
@@ -383,6 +381,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,88,187,460,'#ffcc66');
           }
           drawFromName(context,fromNameVal,550,(187 + rownum * 50 + 50),'#ffcc66');
+          context.drawImage(QRcodeImg,500,550);
+          drawTextUp(context,490,600,'#f4d776');
+          drawTextDown(context,489,610,'#f4d776');
         } else if (selectImgFlag == 2) {
           var toNameVal = $("input[name='toNameThree']").val();
           var fromNameVal = $("input[name='fromNameThree']").val();
@@ -401,6 +402,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,100,330,440,'#ffffff');
           }
           drawFromName(context,fromNameVal,515,(330 + rownum * 50 + 50),'#ffffff');
+          context.drawImage(QRcodeImg,500,550);
+          drawTextUp(context,490,600,'#ffffff');
+          drawTextDown(context,489,610,'#ffffff');
         } else {
           var toNameVal = $("input[name='toNameFour']").val();
           var fromNameVal = $("input[name='fromNameFour']").val();
@@ -419,6 +423,9 @@ progressbar.init();
             rownum = drawText(context,blessValStr,85,510,465,'#521f3b');
           }
           drawFromName(context,fromNameVal,530,(510 + rownum * 50 + 40),'#521f3b');
+          context.drawImage(QRcodeImg,500,550);
+          drawTextUp(context,490,600,'#ffffff');
+          drawTextDown(context,489,610,'#ffffff');
         }
         document.getElementById('makePhoster').style.display='none';
         document.getElementById('createPhoster').style.display='block';
@@ -437,6 +444,18 @@ progressbar.init();
       context.textAlign='right';
       context.fillStyle=c;
       context.fillText(t,x,y);
+    }
+    function drawTextUp(context,x,y,c){
+      context.font='14px';
+      context.textAlign='left';
+      context.fillStyle= c;
+      context.fillText('长按制作专属祝福卡',x,y);
+    }
+    function drawTextDown(context,x,y,c){
+      context.font='13px';
+      context.textAlign='left';
+      context.fillStyle= c;
+      context.fillText('雀巢母婴营养e学界出品',x,y);
     }
     function drawText(context,t,x,y,w,c){
       var chr = t.split("");
